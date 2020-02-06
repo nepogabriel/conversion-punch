@@ -25,6 +25,26 @@
     background-image: <?php header_image(); ?>;
 }
 
+.barcta {
+    background-color: <?php echo get_theme_mod('gb_barcta'); ?>;
+    color: <?php echo get_theme_mod('gb_barcta_text'); ?>;
+}
+
+.barcta:hover {
+    background-color: <?php echo get_theme_mod('gb_barcta_hover'); ?>;
+    color: <?php echo get_theme_mod('gb_barcta_text_hover'); ?>;
+}
+
+.barcta .cta button {
+    color: <?php echo get_theme_mod('gb_barcta_button_text'); ?>;
+    background-color: <?php echo get_theme_mod('gb_barcta_button'); ?>;
+}
+
+.barcta:hover .cta button {
+    color: <?php echo get_theme_mod('gb_barcta_button_text_hover'); ?>;
+    background-color: <?php echo get_theme_mod('gb_barcta_button_hover'); ?>;
+}
+
 /* LOOP DE POSTS */
 .post_title a {
     color: <?php echo get_theme_mod('gb_titlepost'); ?>;
@@ -46,6 +66,11 @@
 .footer_down {
     background-color: <?php echo get_theme_mod('gb_footerdown'); ?>;
     color: <?php echo get_theme_mod('gb_footerdown_text'); ?>;
+}
+
+.footer_down:hover {
+    background-color: <?php echo get_theme_mod('gb_footerdown_hover'); ?>;
+    color: <?php echo get_theme_mod('gb_footerdown_text_hover'); ?>;
 }
 
 </style>

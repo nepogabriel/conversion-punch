@@ -43,6 +43,18 @@ get_template_part('template_parts/banner-home');
     </div>
 </div>
 
+<div class="barcta">
+    <div class="container">
+            <div class="cta">
+            <div class="row justify-content-center">
+                <h3> Frase com chamada para ação aqui! </h3>
+                <button> Saiba Mais </button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- LOOP DE POSTS -->
 <section>
     <div class="container">

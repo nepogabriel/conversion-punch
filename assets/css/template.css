@@ -7,7 +7,7 @@ body {
 }
 
 .top_header {
-    background-color: #04c471;
+    background-color: #03072b;
     height: 5px;
 }
 
@@ -80,6 +80,10 @@ body {
     color: #03072b;
 }
 
+.banner h2:hover strong {
+    color: #04c471;
+}
+
 .banner .optin {
     font-size: 16px;
     color: #fff;
@@ -116,6 +120,11 @@ body {
     box-shadow: 2px 2px 8px #333;
 }
 
+.banner .optin_btn:hover {
+    color: #03072b;
+    background-color: #04c471;
+}
+
 .banner-small {
     padding-bottom: 30px;
     margin-bottom: 20px;
@@ -145,6 +154,45 @@ body {
     margin-right: 20px;
     border-radius: 5px;
     float: left;
+}
+
+/*BARRA CTA*/
+.barcta {
+    height: 70px;
+    background-color: #03072b;
+    color: #04c471;
+}
+
+.barcta:hover {
+    background-color: #04c471;
+    color: #03072b;
+}
+
+.barcta .cta {
+    padding-top: 12px;
+}
+
+.barcta h3 {
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.barcta .cta button {
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #03072b;
+    background-color: #04c471;
+    border: 0;
+    border-radius: 10px;
+    padding: 0 23px 0 23px;
+    margin-left: 10px;
+    box-shadow: 2px 2px 8px #333;
+}
+
+.barcta:hover .cta button {
+    color: #04c471;
+    background-color: #03072b;
 }
 
 /*LOOP DE POSTS*/
@@ -223,8 +271,13 @@ article.type-post {
     background-color: #04c471;
     padding: 25px 0 5px 0; 
     font-size: 13px;
-    color: #000;
+    color: #03072b;
     text-align: center;
+}
+
+.footer_down:hover {
+    background-color: #03072b;
+    color: #04c471;
 }
 
 /*SINGLE*/
