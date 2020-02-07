@@ -275,6 +275,34 @@ article.type-post {
 
 .footer_up .widget {
     width: 100%;
+    justify-content: center;
+}
+
+.footer_widget h4 {
+    color: #04c471;
+}
+
+.footer_widget h4::after {
+    background-color: #04c471;
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.footer_widget ul,
+.footer_widget li {
+    list-style: none;
+    display: block;
+    padding: 0;
+}
+
+.footer_widget a,
+.footer_widget p {
+    color: #fff;
+    text-decoration: none;
 }
 
 .footer_down {

@@ -40,20 +40,20 @@
                             </nav>
 
                             <div class="social">
-                                <?php if(get_theme_mod('gb_facebook')): ?>
-                                    <a target="_blank" href="<?php echo get_theme_mod('gb_facebook'); ?>">
+                                <?php if(get_theme_mod('gc_facebook')): ?>
+                                    <a target="_blank" href="<?php echo get_theme_mod('gc_facebook'); ?>">
                                         <img src="<?php echo get_template_directory_uri().'/assets/img/fb_logo.png'; ?>">
                                     </a>
                                 <?php endif; ?>
                                 
-                                <?php if(get_theme_mod('gb_youtube')): ?>
-                                    <a target="_blank" href="<?php echo get_theme_mod('gb_youtube'); ?>">
+                                <?php if(get_theme_mod('gc_youtube')): ?>
+                                    <a target="_blank" href="<?php echo get_theme_mod('gc_youtube'); ?>">
                                         <img src="<?php echo get_template_directory_uri().'/assets/img/yt_logo.png'; ?>">
                                     </a>
                                 <?php endif; ?>
                                 
-                                <?php if(get_theme_mod('gb_instagram')): ?>
-                                    <a target="_blank" href="<?php echo get_theme_mod('gb_instagram'); ?>">
+                                <?php if(get_theme_mod('gc_instagram')): ?>
+                                    <a target="_blank" href="<?php echo get_theme_mod('gc_instagram'); ?>">
                                         <img src="<?php echo get_template_directory_uri().'/assets/img/in_logo.png'; ?>">
                                     </a>
                                 <?php endif; ?>

@@ -12,9 +12,9 @@ get_template_part('template_parts/banner-home');
             <div class="col-sm-6">
                 <?php
                     $d = rand(1,5);
-                    $txt = get_theme_mod('gb_depo'.$d.'_txt');
-                    $url = get_theme_mod('gb_depo'.$d.'_url'); //variavel comum
-                    $autor = get_theme_mod('gb_depo'.$d.'_autor');
+                    $txt = get_theme_mod('gc_depo'.$d.'_txt');
+                    $url = get_theme_mod('gc_depo'.$d.'_url'); //variavel comum
+                    $autor = get_theme_mod('gc_depo'.$d.'_autor');
                     $url = wp_get_attachment_image_src($url); //é um array que pega o id da imagem
                 ?>
 
@@ -29,9 +29,9 @@ get_template_part('template_parts/banner-home');
                         $d2 = rand(1,5);
                     }
 
-                    $txt = get_theme_mod('gb_depo'.$d2.'_txt');
-                    $url = get_theme_mod('gb_depo'.$d2.'_url');
-                    $autor = get_theme_mod('gb_depo'.$d2.'_autor');
+                    $txt = get_theme_mod('gc_depo'.$d2.'_txt');
+                    $url = get_theme_mod('gc_depo'.$d2.'_url');
+                    $autor = get_theme_mod('gc_depo'.$d2.'_autor');
                     $url = wp_get_attachment_image_src($url);
                 ?>
 

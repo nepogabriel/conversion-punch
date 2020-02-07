@@ -1,5 +1,5 @@
 <?php
-function gb_theme_styles(){
+function gc_theme_styles(){
     //CSS
     wp_enqueue_style("bootstrap_css", get_template_directory_uri().'/assets/css/bootstrap.min.css');
     wp_enqueue_style("google_fonts", "https://fonts.googleapis.com/css?family=Lato&display=swap");
@@ -10,7 +10,7 @@ function gb_theme_styles(){
     wp_enqueue_script("script_js", get_template_directory_uri().'/assets/js/script.js', array('jquery', 'bootstrap_js'), false, true);
 }
 
-function gb_after_setup(){
+function gc_after_setup(){
     add_theme_support("title-tag");
     add_theme_support("post-thumbnails");
     add_theme_support("custom-logo");
@@ -39,7 +39,7 @@ function gb_after_setup(){
     register_nav_menu("top", "Menu Principal");
 }
 
-function gb_widgets() {
+function gc_widgets() {
 
     register_sidebar( array(
         'name' => 'Sidebar Lateral',

@@ -1,66 +1,69 @@
 <?php
-function gb_colors_customizer( $wp_customize ) {
+function gc_colors_customizer( $wp_customize ) {
 
 //Settings
     //Header
-    $wp_customize->add_setting('gb_linetop', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_menu', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_menu_decoration', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_linetop', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_menu', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_menu_decoration', array('default' => '#04c471'));
 
-    $wp_customize->add_setting('gb_barcta', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_barcta_hover', array('default' => '#04c471'));
-    $wp_customize->add_setting('gb_barcta_text', array('default' => '#04c471'));
-    $wp_customize->add_setting('gb_barcta_text_hover', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_barcta_button', array('default' => '#04c471'));
-    $wp_customize->add_setting('gb_barcta_button_hover', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_barcta_button_text', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_barcta_button_text_hover', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_barcta', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_barcta_hover', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_barcta_text', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_barcta_text_hover', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_barcta_button', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_barcta_button_hover', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_barcta_button_text', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_barcta_button_text_hover', array('default' => '#04c471'));
 
     //Loop de Posts
-    $wp_customize->add_setting('gb_titlepost', array('default' => '#2d3a64'));
-    $wp_customize->add_setting('gb_button', array('default' => '#455482'));
-    $wp_customize->add_setting('gb_pagination', array('default' => '#2d3a64'));
-    $wp_customize->add_setting('gb_pagination_hover', array('default' => '#2d3a64'));
+    $wp_customize->add_setting('gc_titlepost', array('default' => '#2d3a64'));
+    $wp_customize->add_setting('gc_button', array('default' => '#455482'));
+    $wp_customize->add_setting('gc_pagination', array('default' => '#2d3a64'));
+    $wp_customize->add_setting('gc_pagination_hover', array('default' => '#2d3a64'));
 
     //Footer
-    $wp_customize->add_setting('gb_footerup', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_footerdown', array('default' => '#04c471'));
-    $wp_customize->add_setting('gb_footerdown_hover', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_footerdown_text', array('default' => '#03072b'));
-    $wp_customize->add_setting('gb_footerdown_text_hover', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_footerup', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_footerup_title', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_footerup_text', array('default' => '#fff'));
+
+    $wp_customize->add_setting('gc_footerdown', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_footerdown_hover', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_footerdown_text', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_footerdown_text_hover', array('default' => '#04c471'));
 
 //Panel
-    $wp_customize->add_panel('gb_colors_panel', array(
+    $wp_customize->add_panel('gc_colors_panel', array(
         'title' => 'Cores',
         'priority' => 2
     ));
 
 //Sections
     //Header
-    $wp_customize->add_section('gb_header', array(
+    $wp_customize->add_section('gc_header', array(
         'title' => 'Cabeçalho',
         'priority' => 1,
-        'panel' => 'gb_colors_panel'
+        'panel' => 'gc_colors_panel'
     ));
 
-    $wp_customize->add_section('gb_barcta_color', array(
+    $wp_customize->add_section('gc_barcta_color', array(
         'title' => 'Barra CPA',
         'priority' => 3,
-        'panel' => 'gb_colors_panel'
+        'panel' => 'gc_colors_panel'
     ));
 
     //Loop de Posts
-    $wp_customize->add_section('gb_loopposts', array(
+    $wp_customize->add_section('gc_loopposts', array(
         'title' => 'Loop de Posts',
         'priority' => 4,
-        'panel' => 'gb_colors_panel'
+        'panel' => 'gc_colors_panel'
     ));
 
     //Footer
-    $wp_customize->add_section('gb_footer', array(
+    $wp_customize->add_section('gc_footer', array(
         'title' => 'Rodapé',
         'priority' => 5,
-        'panel' => 'gb_colors_panel'
+        'panel' => 'gc_colors_panel'
     ));
 
 //Controllers
@@ -68,11 +71,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_linetop',
+            'gc_linetop',
             array(
                 'label' => 'Linha Topo',
-                'section' => 'gb_header',
-                'settings' => 'gb_linetop',
+                'section' => 'gc_header',
+                'settings' => 'gc_linetop',
             )
         )
     );
@@ -80,11 +83,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_menu',
+            'gc_menu',
             array(
                 'label' => 'Menu',
-                'section' => 'gb_header',
-                'settings' => 'gb_menu',
+                'section' => 'gc_header',
+                'settings' => 'gc_menu',
             )
         )
     );
@@ -92,11 +95,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_menu_decoration',
+            'gc_menu_decoration',
             array(
                 'label' => 'Hover Menu',
-                'section' => 'gb_header',
-                'settings' => 'gb_menu_decoration',
+                'section' => 'gc_header',
+                'settings' => 'gc_menu_decoration',
             )
         )
     );
@@ -104,11 +107,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta',
+            'gc_barcta',
             array(
                 'label' => 'Background Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta',
             )
         )
     );
@@ -116,11 +119,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta_hover',
+            'gc_barcta_hover',
             array(
                 'label' => 'Background Hover Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta_hover',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta_hover',
             )
         )
     );
@@ -128,11 +131,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta_text',
+            'gc_barcta_text',
             array(
                 'label' => 'Texto Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta_text',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta_text',
             )
         )
     );
@@ -140,11 +143,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta_text_hover',
+            'gc_barcta_text_hover',
             array(
                 'label' => 'Hover Texto Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta_text_hover',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta_text_hover',
             )
         )
     );
@@ -152,11 +155,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta_button',
+            'gc_barcta_button',
             array(
                 'label' => 'Background Botão Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta_button',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta_button',
             )
         )
     );
@@ -164,11 +167,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta_button_hover',
+            'gc_barcta_button_hover',
             array(
                 'label' => 'Hover Background Botão Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta_button_hover',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta_button_hover',
             )
         )
     );
@@ -176,11 +179,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta_button_text',
+            'gc_barcta_button_text',
             array(
                 'label' => 'Texto Botão Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta_button_text',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta_button_text',
             )
         )
     );
@@ -188,11 +191,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_barcta_button_text_hover',
+            'gc_barcta_button_text_hover',
             array(
                 'label' => 'Hover Texto Botão Barra CPA',
-                'section' => 'gb_barcta_color',
-                'settings' => 'gb_barcta_button_text_hover',
+                'section' => 'gc_barcta_color',
+                'settings' => 'gc_barcta_button_text_hover',
             )
         )
     );
@@ -201,11 +204,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_titlepost',
+            'gc_titlepost',
             array(
                 'label' => 'Título do Post',
-                'section' => 'gb_loopposts',
-                'settings' => 'gb_titlepost',
+                'section' => 'gc_loopposts',
+                'settings' => 'gc_titlepost',
             )
         )
     );
@@ -213,11 +216,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_button',
+            'gc_button',
             array(
                 'label' => 'Botão "Ler Mais"',
-                'section' => 'gb_loopposts',
-                'settings' => 'gb_button',
+                'section' => 'gc_loopposts',
+                'settings' => 'gc_button',
             )
         )
     );
@@ -225,11 +228,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_pagination',
+            'gc_pagination',
             array(
                 'label' => 'Paginação',
-                'section' => 'gb_loopposts',
-                'settings' => 'gb_pagination',
+                'section' => 'gc_loopposts',
+                'settings' => 'gc_pagination',
             )
         )
     );
@@ -237,11 +240,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_pagination_hover',
+            'gc_pagination_hover',
             array(
                 'label' => 'Borda Paginação',
-                'section' => 'gb_loopposts',
-                'settings' => 'gb_pagination_hover',
+                'section' => 'gc_loopposts',
+                'settings' => 'gc_pagination_hover',
             )
         )
     );
@@ -251,11 +254,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_footerup',
+            'gc_footerup',
             array(
                 'label' => 'Rodapé Superior',
-                'section' => 'gb_footer',
-                'settings' => 'gb_footerup',
+                'section' => 'gc_footer',
+                'settings' => 'gc_footerup',
             )
         )
     );
@@ -263,11 +266,35 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_footerdown',
+            'gc_footerup_title',
+            array(
+                'label' => 'Titulo Rodapé Superior',
+                'section' => 'gc_footer',
+                'settings' => 'gc_footerup_title',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_footerup_text',
+            array(
+                'label' => 'Texto/Link Rodapé Superior',
+                'section' => 'gc_footer',
+                'settings' => 'gc_footerup_text',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_footerdown',
             array(
                 'label' => 'Rodapé Inferior',
-                'section' => 'gb_footer',
-                'settings' => 'gb_footerdown',
+                'section' => 'gc_footer',
+                'settings' => 'gc_footerdown',
             )
         )
     );
@@ -275,11 +302,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_footerdown_hover',
+            'gc_footerdown_hover',
             array(
                 'label' => 'Hover Rodapé Inferior',
-                'section' => 'gb_footer',
-                'settings' => 'gb_footerdown_hover',
+                'section' => 'gc_footer',
+                'settings' => 'gc_footerdown_hover',
             )
         )
     );
@@ -287,11 +314,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_footerdown_text',
+            'gc_footerdown_text',
             array(
                 'label' => 'Texto Rodapé Inferior',
-                'section' => 'gb_footer',
-                'settings' => 'gb_footerdown_text',
+                'section' => 'gc_footer',
+                'settings' => 'gc_footerdown_text',
             )
         )
     );
@@ -299,11 +326,11 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gb_footerdown_text_hover',
+            'gc_footerdown_text_hover',
             array(
                 'label' => 'Hover Texto Rodapé Inferior',
-                'section' => 'gb_footer',
-                'settings' => 'gb_footerdown_text_hover',
+                'section' => 'gc_footer',
+                'settings' => 'gc_footerdown_text_hover',
             )
         )
     );

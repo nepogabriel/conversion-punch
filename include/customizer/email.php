@@ -1,10 +1,10 @@
 <?php
-function gb_email_customizer( $wp_customize ) {
+function gc_email_customizer( $wp_customize ) {
     //Settings
-    $wp_customize->add_setting('gb_email_home', array('default' => ''));
+    $wp_customize->add_setting('gc_email_home', array('default' => ''));
 
     //Sections
-    $wp_customize->add_section('gb_email_section', array(
+    $wp_customize->add_section('gc_email_section', array(
         'title' => 'E-mail Marketing',
         'priority' => 3
     ));
@@ -13,11 +13,11 @@ function gb_email_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
-            'gb_email_home',
+            'gc_email_home',
             array(
                 'label' => 'E-mail Marketing',
-                'section' => 'gb_email_section',
-                'settings' => 'gb_email_home',
+                'section' => 'gc_email_section',
+                'settings' => 'gc_email_home',
                 'type' => 'textarea'
             )
         )

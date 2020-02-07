@@ -28,7 +28,7 @@
                         </form>-->
                         
                         <!-- Ñ SEI SE ESTÁ FUNCIONANDO, TESTAR ONLINE -->
-                        <?php //if(get_heme_mod('gb_email_home')): ?>
+                        <?php //if(get_heme_mod('gc_email_home')): ?>
                             <form method="POST" action="enviar-email.php">
                                 <input class="optin_email" type="email" name="email" placeholder="Digite seu melhor e-mail aqui..." required/>
                                 <input class="optin_btn" type="submit" value="Cadastrar"/>
