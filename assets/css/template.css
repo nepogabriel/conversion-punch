@@ -172,8 +172,9 @@ body {
     padding-top: 12px;
 }
 
-.barcta h3 {
-    font-size: 20px;
+.barcta p {
+    font-size: 17px;
+    font-weight: 600;
     padding-top: 12px;
 }
 
@@ -265,6 +266,15 @@ article.type-post {
 /*FOOTER*/
 .footer_up{
     background-color: #03072b;
+    padding: 40px;
+}
+
+.footer_up .footer_widget {
+    display: flex;
+}
+
+.footer_up .widget {
+    width: 100%;
 }
 
 .footer_down {

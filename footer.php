@@ -1,6 +1,12 @@
 <footer>
     <div class="footer_up">
-        FALTA AQUI
+        <div class="footer_widget">
+            <?php
+                if(is_active_sidebar('gc_footersidebar')) {
+                    dynamic_sidebar('gc_footersidebar');
+                }
+            ?>
+        </div>
     </div>
 
     <div class="footer_down">
@@ -21,6 +27,12 @@
 .top_header {
     background-color: <?php echo get_theme_mod('gb_linetop'); ?>;
 }
+
+.menuarea nav li a {
+    text-decoration-color: <?php echo get_theme_mod('gb_menu_decoration'); ?>;
+    color: <?php echo get_theme_mod('gb_menu'); ?>;
+}
+
 .banner {
     background-image: <?php header_image(); ?>;
 }

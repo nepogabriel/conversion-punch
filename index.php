@@ -47,7 +47,7 @@ get_template_part('template_parts/banner-home');
     <div class="container">
             <div class="cta">
             <div class="row justify-content-center">
-                <h3> Frase com chamada para ação aqui! </h3>
+                <p> Frase com chamada para ação aqui! </p>
                 <button> Saiba Mais </button>
             </div>
             </div>

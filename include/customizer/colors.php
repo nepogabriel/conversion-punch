@@ -4,6 +4,8 @@ function gb_colors_customizer( $wp_customize ) {
 //Settings
     //Header
     $wp_customize->add_setting('gb_linetop', array('default' => '#03072b'));
+    $wp_customize->add_setting('gb_menu', array('default' => '#03072b'));
+    $wp_customize->add_setting('gb_menu_decoration', array('default' => '#04c471'));
 
     $wp_customize->add_setting('gb_barcta', array('default' => '#03072b'));
     $wp_customize->add_setting('gb_barcta_hover', array('default' => '#04c471'));
@@ -40,12 +42,20 @@ function gb_colors_customizer( $wp_customize ) {
         'priority' => 1,
         'panel' => 'gb_colors_panel'
     ));
+
+    $wp_customize->add_section('gb_barcta_color', array(
+        'title' => 'Barra CPA',
+        'priority' => 3,
+        'panel' => 'gb_colors_panel'
+    ));
+
     //Loop de Posts
     $wp_customize->add_section('gb_loopposts', array(
         'title' => 'Loop de Posts',
         'priority' => 4,
         'panel' => 'gb_colors_panel'
     ));
+
     //Footer
     $wp_customize->add_section('gb_footer', array(
         'title' => 'Rodapé',
@@ -70,10 +80,34 @@ function gb_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
+            'gb_menu',
+            array(
+                'label' => 'Menu',
+                'section' => 'gb_header',
+                'settings' => 'gb_menu',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gb_menu_decoration',
+            array(
+                'label' => 'Hover Menu',
+                'section' => 'gb_header',
+                'settings' => 'gb_menu_decoration',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
             'gb_barcta',
             array(
                 'label' => 'Background Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta',
             )
         )
@@ -85,7 +119,7 @@ function gb_colors_customizer( $wp_customize ) {
             'gb_barcta_hover',
             array(
                 'label' => 'Background Hover Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta_hover',
             )
         )
@@ -97,7 +131,7 @@ function gb_colors_customizer( $wp_customize ) {
             'gb_barcta_text',
             array(
                 'label' => 'Texto Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta_text',
             )
         )
@@ -109,7 +143,7 @@ function gb_colors_customizer( $wp_customize ) {
             'gb_barcta_text_hover',
             array(
                 'label' => 'Hover Texto Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta_text_hover',
             )
         )
@@ -121,7 +155,7 @@ function gb_colors_customizer( $wp_customize ) {
             'gb_barcta_button',
             array(
                 'label' => 'Background Botão Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta_button',
             )
         )
@@ -133,7 +167,7 @@ function gb_colors_customizer( $wp_customize ) {
             'gb_barcta_button_hover',
             array(
                 'label' => 'Hover Background Botão Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta_button_hover',
             )
         )
@@ -145,7 +179,7 @@ function gb_colors_customizer( $wp_customize ) {
             'gb_barcta_button_text',
             array(
                 'label' => 'Texto Botão Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta_button_text',
             )
         )
@@ -157,7 +191,7 @@ function gb_colors_customizer( $wp_customize ) {
             'gb_barcta_button_text_hover',
             array(
                 'label' => 'Hover Texto Botão Barra CPA',
-                'section' => 'gb_header',
+                'section' => 'gb_barcta_color',
                 'settings' => 'gb_barcta_button_text_hover',
             )
         )
