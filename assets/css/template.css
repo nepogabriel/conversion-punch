@@ -4,11 +4,16 @@
 
 body {
     margin: 0;
+    background-color: #f0f0f0;
 }
 
 .top_header {
     background-color: #03072b;
     height: 5px;
+}
+
+header {
+    background-color: #fff;
 }
 
 /*LOGO*/
@@ -65,7 +70,7 @@ body {
 
 /* BANNER HOME/PAGE/SINGLE*/
 .banner {
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/bg-cap.png');
     background-position: center;
 }
 
@@ -100,11 +105,10 @@ body {
     max-width: 330px;
     font-size: 14px;
     border: 0;
-    border-radius: 10px;
     outline: 0;
     color: #333;
     padding: 0 15px 0 15px;
-    box-shadow: 2px 2px 8px #333;
+    box-shadow: 2px 2px 8px rgb(22, 22, 22);
 }
 
 .banner .optin_btn {
@@ -114,15 +118,26 @@ body {
     color: #04c471;
     background-color: #03072b;
     border: 0;
-    border-radius: 10px;
+    
     padding: 0 23px 0 23px;
     margin-left: 10px;
-    box-shadow: 2px 2px 8px #333;
+    box-shadow: 2px 2px 8px rgb(22, 22, 22);
 }
 
 .banner .optin_btn:hover {
     color: #03072b;
     background-color: #04c471;
+}
+
+.banner form {
+    margin-bottom: 10px;
+}
+
+.banner p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .banner-small {
@@ -136,9 +151,9 @@ body {
 
 /*HERO IMAGE*/
 .hero-image {
-    height: 285px;
+    height: 250px;
     width: auto;
-    margin-top: 15px;
+    margin: 40px 5px 10px 5px;
 }
 
 /*DEPOIMENTOS*/
@@ -185,10 +200,9 @@ body {
     color: #03072b;
     background-color: #04c471;
     border: 0;
-    border-radius: 10px;
     padding: 0 23px 0 23px;
     margin-left: 10px;
-    box-shadow: 2px 2px 8px #333;
+    box-shadow: 2px 2px 8px rgb(22, 22, 22);;
 }
 
 .barcta:hover .cta button {
@@ -206,24 +220,48 @@ article.type-post {
     height: auto;
 }
 
+.post_category h6 a {
+    color: #04c471;
+}
+
 .post_title {
     font-size: 25px;
     font-weight: bold;
 }
 
 .post_title a {
-    color: #2d3a64;
+    color: #03072b;
     text-decoration: none;
 }
 
 .post_title a:hover {
-    color: #000;
+    border-bottom: 1px solid #04c471;
+}
+
+.post_info {
+    margin-left: 16px;
+}
+
+.post_info p {
+    font-size: 15px;
+}
+
+.post_info p a {
+    color: #04c471;
+    text-decoration-color: #03072b;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 10;
+    border: 0;
+    border-top: 1px solid #04c471;
 }
 
 .post_excerpt {
     font-size: 15px;
     color: #000;
-    margin-top: 20px;
+    text-align: justify;
 }
 
 .post_readmore {
@@ -233,10 +271,15 @@ article.type-post {
 .post_button {
     padding: 12px;
     font-size: 14px;
-    color: #fff;
-    background-color: #455482;
+    color: #04c471;
+    background-color: #03072b;
     display: inline-block;
-    border-radius: 8px;
+}
+
+.post_button:hover {
+    background-color: transparent;
+    border: 2px solid #03072b;
+    padding: 10px;
 }
 
 /*BOTÃO PAGINAÇÃO AJAX*/
@@ -263,6 +306,39 @@ article.type-post {
     width: auto;
 }
 
+/*SIDEBAR*/
+.sidebar {
+    margin-top: 40px;
+}
+
+.sidebar .widget{
+    border: 1px solid #03072b;
+    margin-bottom: 20px;
+    box-shadow: 0px/*hor.*/ 3px/*vert.*/ 20px rgb(22, 22, 22);
+}
+
+.sidebar .widget_title {
+    background-color: #03072b;
+    color: #04c471;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar ul,
+.sidebar li {
+    list-style: none;
+    display: block;
+    padding: 0;
+}
+
+.sidebar a,
+.sidebar p {
+    color: #000;
+    padding: 10px;
+}
+
 /*FOOTER*/
 .footer_up{
     background-color: #03072b;
@@ -276,13 +352,14 @@ article.type-post {
 .footer_up .widget {
     width: 100%;
     justify-content: center;
+    padding: 0 10px 0 20px;
 }
 
-.footer_widget h4 {
+.footer_widget .widget_title {
     color: #04c471;
 }
 
-.footer_widget h4::after {
+.footer_widget .widget_title::after {
     background-color: #04c471;
     display: block;
     content: "";
@@ -319,6 +396,21 @@ article.type-post {
 }
 
 /*SINGLE*/
+.post h1 {
+    color: #03072b;
+}
+
+.post h6 {
+    border: 2px solid #03072b;
+    padding: 9px;
+    display: inline-block;
+}
+
+.post h6 a {
+    color: #04c471;
+    
+}
+
 .post_content {
     margin: 20px 0 50px 0;
 }
@@ -326,4 +418,33 @@ article.type-post {
 .post_content img {
     width: 100%;
     height: auto;
+}
+
+/*PAGINAÇÃO*/
+.pag a {
+    text-decoration: none;
+}
+
+.pag a:hover {
+    color: #04c471;
+}
+
+.pag i {
+    color: #03072b;
+    font-weight: 700;
+}
+
+.pag i:hover {
+    color: #04c471;
+}
+
+.page-numbers {
+    color: #03072b;
+    border: 2px solid #03072b;
+    padding: 5px 10px 5px 10px;
+    font-weight: 700;
+}
+
+.page-numbers.current {
+    background-color: #04c471;
 }

@@ -17,10 +17,14 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_setting('gc_barcta_button_text_hover', array('default' => '#04c471'));
 
     //Loop de Posts
-    $wp_customize->add_setting('gc_titlepost', array('default' => '#2d3a64'));
-    $wp_customize->add_setting('gc_button', array('default' => '#455482'));
-    $wp_customize->add_setting('gc_pagination', array('default' => '#2d3a64'));
-    $wp_customize->add_setting('gc_pagination_hover', array('default' => '#2d3a64'));
+    $wp_customize->add_setting('gc_cat_author_hr', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_titlepost', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_pagination', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_bg_pagination', array('default' => '#04c471'));
+
+    //Sidebar
+    $wp_customize->add_setting('gc_bg_sidebar', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_sidebar_text', array('default' => '#04c471'));
 
     //Footer
     $wp_customize->add_setting('gc_footerup', array('default' => '#03072b'));
@@ -59,10 +63,17 @@ function gc_colors_customizer( $wp_customize ) {
         'panel' => 'gc_colors_panel'
     ));
 
+    //Sidebar
+    $wp_customize->add_section('gc_sidebar', array(
+        'title' => 'Sidebar',
+        'priority' => 5,
+        'panel' => 'gc_colors_panel'
+    ));
+
     //Footer
     $wp_customize->add_section('gc_footer', array(
         'title' => 'Rodapé',
-        'priority' => 5,
+        'priority' => 6,
         'panel' => 'gc_colors_panel'
     ));
 
@@ -204,9 +215,21 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
+            'gc_cat_author_hr',
+            array(
+                'label' => 'Categoria/Autor/Linha/Botão/Hover Título',
+                'section' => 'gc_loopposts',
+                'settings' => 'gc_cat_author_hr',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
             'gc_titlepost',
             array(
-                'label' => 'Título do Post',
+                'label' => 'Título Post/Bg Botão/Borda Categoria',
                 'section' => 'gc_loopposts',
                 'settings' => 'gc_titlepost',
             )
@@ -216,11 +239,35 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
+            'gc_titlepost_hover',
+            array(
+                'label' => 'Hover Título do Post',
+                'section' => 'gc_loopposts',
+                'settings' => 'gc_titlepost_hover',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
             'gc_button',
             array(
-                'label' => 'Botão "Ler Mais"',
+                'label' => 'Background Botão',
                 'section' => 'gc_loopposts',
                 'settings' => 'gc_button',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_button_text',
+            array(
+                'label' => 'Texto do Botão',
+                'section' => 'gc_loopposts',
+                'settings' => 'gc_button_text',
             )
         )
     );
@@ -240,15 +287,39 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gc_pagination_hover',
+            'gc_bg_pagination',
             array(
-                'label' => 'Borda Paginação',
+                'label' => 'Background Paginação',
                 'section' => 'gc_loopposts',
-                'settings' => 'gc_pagination_hover',
+                'settings' => 'gc_bg_pagination',
             )
         )
     );
 
+    //SIDEBAR
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_bg_sidebar',
+            array(
+                'label' => 'Background Sidebar',
+                'section' => 'gc_sidebar',
+                'settings' => 'gc_bg_sidebar',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_sidebar_text',
+            array(
+                'label' => 'Texto Sidebar',
+                'section' => 'gc_sidebar',
+                'settings' => 'gc_sidebar_text',
+            )
+        )
+    );
 
     //FOOTER
     $wp_customize->add_control(
@@ -256,7 +327,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_footerup',
             array(
-                'label' => 'Rodapé Superior',
+                'label' => 'Background Rodapé Superior',
                 'section' => 'gc_footer',
                 'settings' => 'gc_footerup',
             )
@@ -292,7 +363,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_footerdown',
             array(
-                'label' => 'Rodapé Inferior',
+                'label' => 'Background Rodapé Inferior',
                 'section' => 'gc_footer',
                 'settings' => 'gc_footerdown',
             )

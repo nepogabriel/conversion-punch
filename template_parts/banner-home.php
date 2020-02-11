@@ -3,15 +3,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5">
-                    <img src="<?php echo get_template_directory_uri().'/assets/img/heroimage.png'; ?>" class="hero-image">
+                    <?php if(get_theme_mod('gc_email_img')): ?>
+                        <img src="<?php echo get_theme_mod('gc_email_img'); ?>" class="hero-image mx-auto d-block">
+                    <?php endif; ?>
                 </div>
 
                 <div class="col-sm-7">
-                    <h2>FALTA AQUI (ter um hover nos strong) | Esse <strong>Blog</strong> é para você que quer <strong>aprender a programar do zero</strong> em pouco tempo!</h2>
+                    <h2> <?php echo get_theme_mod('gc_email_text'); ?> </h2>
                     
                     <div class="optin">
-                        Se você quer receber <strong>conteúdos exclusivos</strong><br>
-                        que eu só mando por e-mail, cadastre-se na lista VIP: (Ter hover inverso no botão)
+                    <?php echo get_theme_mod('gc_email_text2'); ?>
 
                         <!--<form method="POST" action="">
                             <input type="hidden" name="u" value="25"/>
@@ -33,9 +34,21 @@
                                 <input class="optin_email" type="email" name="email" placeholder="Digite seu melhor e-mail aqui..." required/>
                                 <input class="optin_btn" type="submit" value="Cadastrar"/>
                             <form>
+
+                            <!--<div class="form-row">
+                                <div class="input-group input-group-append col">
+                                    <input class="form-control border border-color2" type="text" id="inputEmail" placeholder="Digite seu melhor e-mail...">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-color2" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>-->
                         <?php //endif; ?>
 
                     </div>
+
+                    <p><?php echo get_theme_mod('gc_email_iconobs'); ?>  <?php echo get_theme_mod('gc_email_textobs'); ?></p>
+
                 </div>
             </div>
         </div>

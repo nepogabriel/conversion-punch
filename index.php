@@ -5,7 +5,7 @@ get_header();
 get_template_part('template_parts/banner-home');
 ?>
 
-<!-- Depoimentos -->
+<!-- Depoimentos 
 <div class="depositions">
     <div class="container">
         <div class="row">
@@ -41,7 +41,7 @@ get_template_part('template_parts/banner-home');
             </div>
         </div>
     </div>
-</div>
+</div>-->
 
 <div class="barcta">
     <div class="container">
@@ -58,21 +58,45 @@ get_template_part('template_parts/banner-home');
 <!-- LOOP DE POSTS -->
 <section>
     <div class="container">
-        <div class="moreposts">
-            <?php if(have_posts()): ?>
-                <?php while(have_posts()): ?>
-                    <?php the_post(); ?>
+        <div class="row">
+            <div class="col-sm-9 moreposts">
+                <?php if(have_posts()): ?>
+                    <?php while(have_posts()): ?>
+                        <?php the_post(); ?>
 
-                    <?php get_template_part('template_parts/post'); ?>
-                    
-                <?php endwhile; ?>
-            <?php endif; ?>
-        </div>
+                        <?php get_template_part('template_parts/post'); ?>
+                        
+                    <?php endwhile; ?>
 
-        <div class="loadmoreButton">
-            <i class="fa fa-angle-down fa-lg"></i>
-            <!--<img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow.png">-->
-            Carregar Mais...
+                    <div class="pag">
+                        <?php
+                            global $wp_query;
+
+                            echo paginate_links( array(
+                                'current' => max(1, get_query_var('paged')),
+                                'total' => $wp_query->max_num_pages,
+                                'show_all' => false,
+                                'end_size' => 1, //padrão
+                                'mid_size' => 2, //padrão
+                                'prev_next' => true, //padrão
+                                'prev_text' => '<i class="fa fa-angle-left"></i>',
+                                'next_text' => '<i class="fa fa-angle-right"></i>'
+
+                            ));
+                        ?>
+                    </div>
+
+                <?php endif; ?>
+                
+            </div>
+
+            <!--<div class="loadmoreButton">
+                <i class="fa fa-angle-down fa-lg"></i>
+                Carregar Mais...
+            </div>-->
+
+            <?php get_sidebar(); ?>
+
         </div>
     </div>
 </section>
