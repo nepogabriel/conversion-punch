@@ -47,7 +47,7 @@
 }
 
 .post_title a:hover {
-    border-bottom: 1px solid <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
+    border-bottom: 1px solid <?php echo get_theme_mod('gc_titlepost'); ?>;
 }
 
 .post_info p a {
@@ -56,16 +56,27 @@
 }
 
 hr {
-    border-top: 1px solid <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
+    border-top: 1px solid <?php echo get_theme_mod('gc_titlepost'); ?>;
 }
 
 .post_button {
-    color: <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
-    background-color: <?php echo get_theme_mod('gc_titlepost'); ?>;
+    color: <?php echo get_theme_mod('gc_titlepost'); ?>;
+    border: 2px solid <?php echo get_theme_mod('gc_titlepost'); ?>;
 }
 
 .post_button:hover {
-    border: 2px solid <?php echo get_theme_mod('gc_titlepost'); ?>;
+    background-color: <?php echo get_theme_mod('gc_titlepost'); ?>;
+    color: <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
+    border: 2px solid <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
+}
+
+.pag a:hover,
+.pag i:hover {
+    color: <?php echo get_theme_mod('gc_bg_pagination'); ?>;
+}
+
+.pag i {
+    color: <?php echo get_theme_mod('gc_pagination'); ?>;
 }
 
 .page-numbers {
@@ -74,18 +85,6 @@ hr {
 }
 
 .page-numbers.current {
-    background-color: <?php echo get_theme_mod('gc_bg_pagination'); ?>;
-}
-
-.pag a:hover {
-    color: <?php echo get_theme_mod('gc_bg_pagination'); ?>;
-}
-
-.pag i {
-    color: <?php echo get_theme_mod('gc_pagination'); ?>;
-}
-
-.pag i:hover {
     color: <?php echo get_theme_mod('gc_bg_pagination'); ?>;
 }
 
@@ -96,7 +95,17 @@ hr {
 }
 
 .sidebar .widget {
-    border: 1px solid <?php echo get_theme_mod('gc_bg_sidebar'); ?>;
+    /*border: 1px solid <?php// echo get_theme_mod('gc_bg_sidebar'); ?>;*/
+}
+
+/*COMENTÁRIOS*/
+.comment-respond .submit {
+    color: <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
+    background-color: <?php echo get_theme_mod('gc_titlepost'); ?>;
+}
+
+.comment-respond .submit:hover {
+    box-shadow: 0 0px 0px 3px <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
 }
 
 /*FOOTER*/

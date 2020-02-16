@@ -1,4 +1,3 @@
-  
 <?php
 get_header();
 
@@ -11,14 +10,16 @@ get_template_part('template_parts/banner-single');
         <div class="row">
             <div class="col-sm-9 moreposts">
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
                     <?php if(have_posts()): ?>
                         <?php while(have_posts()): ?>
                             <?php
                                 the_post();
-                                $link_post = esc_url(get_permalink());?>
+                                $link_post = esc_url(get_permalink());
+                            ?>
 
                                 <h6><?php the_category(', '); ?></h6>
-                                <h1> <?php the_title(); ?> </h1>
+                                <h1 class="title-p-s"> <?php the_title(); ?> </h1>
 
                                 <div class="post_info">
                                     <div class="row">
@@ -38,9 +39,36 @@ get_template_part('template_parts/banner-single');
 
                                 <hr>
 
-                                <h4>Confira outros <Strong>Posts Relacionados:</strong></h4>
+                                <h4 class="post_related">Confira outros <Strong>Posts Relacionados:</strong></h4>
+                                <div class="row">
+                                <?php
+                                    $categories = get_the_category(); //buscando categorias do post (é um array)
+
+                                    $gp_query = new WP_Query(array(
+                                        'posts_per_page' => 3, //quantidade de posts
+                                        'post__not_in' => array( $post->ID ), //p/ não mostrar o post que está aberto
+                                        'cat' => $categories[0]->term_id //pegando primeira categoria do post
+                                    ));
+                                    
+                                    //Verificando se tem posts relacionados
+                                    if($gp_query->have_posts()) {
+                                        while($gp_query->have_posts()) {
+                                        $gp_query->the_post();
+                                        get_template_part('template_parts/related_post'); //Chamando arquivo related_post
+                                        }
+
+                                        //reseta e volta com requisições principais (por exemplo, p/ mostrar comentários e paginação)
+                                        wp_reset_postdata();
+                                    }
+                                ?>
+                                </div>
+
+                                <div style="clear:both"></div>
 
                                 <hr>
+
+                                <!-- Comentários 
+                                <p> <?php// comments_number('0 comentários', '1 comentário', '% comentários'); ?> </p>-->
                                 
                                 <?php
                                     if(comments_open()) {
@@ -49,7 +77,8 @@ get_template_part('template_parts/banner-single');
                                 ?>
 
                         <?php endwhile; ?>
-                    <?php endif; ?>
+                    <?php else : get_404_template(); endif; ?>
+
                 </div>
             </div>
 

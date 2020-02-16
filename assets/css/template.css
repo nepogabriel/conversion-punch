@@ -255,7 +255,7 @@ hr {
     margin-top: 0;
     margin-bottom: 10;
     border: 0;
-    border-top: 1px solid #04c471;
+    border-top: 1px solid #03072b;
 }
 
 .post_excerpt {
@@ -269,17 +269,20 @@ hr {
 }
 
 .post_button {
-    padding: 12px;
+    padding: 10px;
     font-size: 14px;
-    color: #04c471;
-    background-color: #03072b;
+    color: #03072b;
+    background-color: transparent;
+    border: 2px solid #03072b;
     display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .post_button:hover {
-    background-color: transparent;
-    border: 2px solid #03072b;
-    padding: 10px;
+    background-color: #03072b;
+    color: #04c471;
+    border: 2px solid #04c471;
 }
 
 /*BOTÃO PAGINAÇÃO AJAX*/
@@ -312,9 +315,9 @@ hr {
 }
 
 .sidebar .widget{
-    border: 1px solid #03072b;
+    /*border: 1px solid #03072b;*/
     margin-bottom: 20px;
-    box-shadow: 0px/*hor.*/ 3px/*vert.*/ 20px rgb(22, 22, 22);
+    box-shadow: 0px/*hor.*/ 2px/*vert.*/ 5px #373737;
 }
 
 .sidebar .widget_title {
@@ -322,8 +325,9 @@ hr {
     color: #04c471;
     text-align: center;
     padding: 15px;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .sidebar ul,
@@ -337,6 +341,71 @@ hr {
 .sidebar p {
     color: #000;
     padding: 10px;
+}
+
+.sidebar span {
+    margin: 10px;
+}
+
+/*PAGINAÇÃO*/
+.pag a {
+    text-decoration: none;
+}
+
+.pag a:hover,
+.pag i:hover {
+    color: #04c471;
+}
+
+.pag i {
+    color: #03072b;
+    font-weight: 700;
+}
+
+.page-numbers {
+    color: #03072b;
+    border: 2px solid #03072b;
+    padding: 5px 10px 5px 10px;
+    font-weight: 700;
+}
+
+.page-numbers.current {
+    color: #04c471;
+}
+
+/*SINGLE*/
+.title-p-s {
+    color: #03072b;
+    font-size: 35px;
+}
+
+.post h6 {
+    border: 2px solid #03072b;
+    padding: 9px;
+    display: inline-block;
+}
+
+.post h6 a {
+    color: #04c471;
+    
+}
+
+.post_content {
+    margin: 20px 0 50px 0;
+}
+
+.post_content img {
+    width: 100%;
+    height: auto;
+}
+
+.post_related {
+    margin-bottom: 20px;
+}
+
+/*POSTS RELACIONADOS*/
+.post_related_item {
+    margin-bottom: 30px;
 }
 
 /*FOOTER*/
@@ -395,56 +464,59 @@ hr {
     color: #04c471;
 }
 
-/*SINGLE*/
-.post h1 {
-    color: #03072b;
+/*COMENTÁRIOS*/
+.commentlist {
+    list-style: none;
+    padding: 0;
 }
 
-.post h6 {
-    border: 2px solid #03072b;
-    padding: 9px;
-    display: inline-block;
+.commentlist .comment-body {
+    background-color: #e8e8e8;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
-.post h6 a {
+.commentlist .children {
+    list-style: none;
+}
+
+.commentlist .comment-author {
+    margin-bottom: 10px;
+}
+
+.commentlist .comment-meta {
+    display: none;
+}
+
+.comment-respond label {
+    display: block;
+}
+
+.comment-respond textarea,
+.comment-respond input[type=text] {
+    width: 300px;
+    border: 2px solid #DDDD;
+    padding: 5px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.comment-respond textarea:hover,
+.comment-respond input[type=text]:hover {
+    box-shadow: 0 0px 0px 3px #DDDD;
+}
+
+.comment-respond .submit {
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
     color: #04c471;
-    
+    background-color: #03072b;
+    border: 0;
+    padding: 0 23px 0 23px;
 }
 
-.post_content {
-    margin: 20px 0 50px 0;
-}
-
-.post_content img {
-    width: 100%;
-    height: auto;
-}
-
-/*PAGINAÇÃO*/
-.pag a {
-    text-decoration: none;
-}
-
-.pag a:hover {
-    color: #04c471;
-}
-
-.pag i {
-    color: #03072b;
-    font-weight: 700;
-}
-
-.pag i:hover {
-    color: #04c471;
-}
-
-.page-numbers {
-    color: #03072b;
-    border: 2px solid #03072b;
-    padding: 5px 10px 5px 10px;
-    font-weight: 700;
-}
-
-.page-numbers.current {
-    background-color: #04c471;
+.comment-respond .submit:hover {
+    box-shadow: 0 0px 0px 3px #04c471;
 }

@@ -217,7 +217,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_cat_author_hr',
             array(
-                'label' => 'Categoria/Autor/Linha/Botão/Hover Título',
+                'label' => 'Categoria/Autor/Texto Botão',
                 'section' => 'gc_loopposts',
                 'settings' => 'gc_cat_author_hr',
             )
@@ -229,7 +229,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_titlepost',
             array(
-                'label' => 'Título Post/Bg Botão/Borda Categoria',
+                'label' => 'Título Post/Bg Botão/Borda Categoria/Linha',
                 'section' => 'gc_loopposts',
                 'settings' => 'gc_titlepost',
             )
@@ -265,7 +265,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_button_text',
             array(
-                'label' => 'Texto do Botão',
+                'label' => 'Botão',
                 'section' => 'gc_loopposts',
                 'settings' => 'gc_button_text',
             )
@@ -289,7 +289,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_bg_pagination',
             array(
-                'label' => 'Background Paginação',
+                'label' => 'Paginação Ativa',
                 'section' => 'gc_loopposts',
                 'settings' => 'gc_bg_pagination',
             )

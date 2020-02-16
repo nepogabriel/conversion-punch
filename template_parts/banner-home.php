@@ -26,16 +26,16 @@
                             <input class="optin_email" type="email" name="email" placeholder="Digite seu melhor e-mail aqui..." required/>
 
                             <input class="optin_btn" type="submit" value="Cadastrar"/>
-                        </form>-->
+                        </form>
                         
-                        <!-- Ñ SEI SE ESTÁ FUNCIONANDO, TESTAR ONLINE -->
+                         Ñ SEI SE ESTÁ FUNCIONANDO, TESTAR ONLINE 
                         <?php //if(get_heme_mod('gc_email_home')): ?>
                             <form method="POST" action="enviar-email.php">
                                 <input class="optin_email" type="email" name="email" placeholder="Digite seu melhor e-mail aqui..." required/>
                                 <input class="optin_btn" type="submit" value="Cadastrar"/>
                             <form>
 
-                            <!--<div class="form-row">
+                            <div class="form-row">
                                 <div class="input-group input-group-append col">
                                     <input class="form-control border border-color2" type="text" id="inputEmail" placeholder="Digite seu melhor e-mail...">
                                     <div class="input-group-append">
