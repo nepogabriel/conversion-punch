@@ -1,4 +1,5 @@
 <style type="text/css">
+/* POSSIVEL COR PARA O TEMPLATE: #bc0d3c #000000;*/
 /* HEADER */
 .top_header {
     background-color: <?php echo get_theme_mod('gc_linetop'); ?>;
@@ -88,6 +89,16 @@ hr {
     color: <?php echo get_theme_mod('gc_bg_pagination'); ?>;
 }
 
+/*FORMULÁRIO DE BUSCA*/
+.form-control{
+    border: 1px solid <?php echo get_theme_mod('gc_form_control'); ?>;
+}
+
+.btn_search {
+    background-color: <?php echo get_theme_mod('gc_form_control'); ?>;
+    color: <?php echo get_theme_mod('gc_icon_search'); ?>;
+}
+
 /*SIDEBAR*/
 .sidebar .widget_title {
     background-color: <?php echo get_theme_mod('gc_bg_sidebar'); ?>;
@@ -124,6 +135,10 @@ hr {
 .footer_widget a,
 .footer_widget p {
     color: <?php echo get_theme_mod('gc_footerup_text'); ?>;
+}
+
+.line_footer {
+    border-top: 1px solid <?php echo get_theme_mod('gc_line_footer'); ?>;
 }
 
 .footer_down {

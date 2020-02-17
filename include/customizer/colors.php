@@ -22,6 +22,10 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_setting('gc_pagination', array('default' => '#03072b'));
     $wp_customize->add_setting('gc_bg_pagination', array('default' => '#04c471'));
 
+    //Search Form
+    $wp_customize->add_setting('gc_form_control', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_icon_search', array('default' => '#04c471'));
+
     //Sidebar
     $wp_customize->add_setting('gc_bg_sidebar', array('default' => '#03072b'));
     $wp_customize->add_setting('gc_sidebar_text', array('default' => '#04c471'));
@@ -31,10 +35,12 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_setting('gc_footerup_title', array('default' => '#04c471'));
     $wp_customize->add_setting('gc_footerup_text', array('default' => '#fff'));
 
-    $wp_customize->add_setting('gc_footerdown', array('default' => '#04c471'));
-    $wp_customize->add_setting('gc_footerdown_hover', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_footerdown_text', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_footerdown_text_hover', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_line_footer', array('default' => '#04c471'));
+
+    $wp_customize->add_setting('gc_footerdown', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_footerdown_hover', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_footerdown_text', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_footerdown_text_hover', array('default' => '#03072b'));
 
 //Panel
     $wp_customize->add_panel('gc_colors_panel', array(
@@ -63,17 +69,24 @@ function gc_colors_customizer( $wp_customize ) {
         'panel' => 'gc_colors_panel'
     ));
 
+    //Search Form
+    $wp_customize->add_section('gc_search_form', array(
+        'title' => 'Formulário de Pesquisa',
+        'priority' => 5,
+        'panel' => 'gc_colors_panel'
+    ));
+
     //Sidebar
     $wp_customize->add_section('gc_sidebar', array(
         'title' => 'Sidebar',
-        'priority' => 5,
+        'priority' => 6,
         'panel' => 'gc_colors_panel'
     ));
 
     //Footer
     $wp_customize->add_section('gc_footer', array(
         'title' => 'Rodapé',
-        'priority' => 6,
+        'priority' => 7,
         'panel' => 'gc_colors_panel'
     ));
 
@@ -296,6 +309,31 @@ function gc_colors_customizer( $wp_customize ) {
         )
     );
 
+    //Search Form
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_form_control',
+            array(
+                'label' => 'Borda / Botão',
+                'section' => 'gc_search_form',
+                'settings' => 'gc_form_control',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_icon_search',
+            array(
+                'label' => 'Icone do Botão',
+                'section' => 'gc_search_form',
+                'settings' => 'gc_icon_search',
+            )
+        )
+    );
+
     //SIDEBAR
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
@@ -314,7 +352,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_sidebar_text',
             array(
-                'label' => 'Texto Sidebar',
+                'label' => 'Título Sidebar',
                 'section' => 'gc_sidebar',
                 'settings' => 'gc_sidebar_text',
             )
@@ -361,6 +399,18 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
+            'gc_line_footer',
+            array(
+                'label' => 'Linha Rodapé',
+                'section' => 'gc_footer',
+                'settings' => 'gc_line_footer',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
             'gc_footerdown',
             array(
                 'label' => 'Background Rodapé Inferior',
@@ -375,7 +425,7 @@ function gc_colors_customizer( $wp_customize ) {
             $wp_customize,
             'gc_footerdown_hover',
             array(
-                'label' => 'Hover Rodapé Inferior',
+                'label' => 'Hover Background Rodapé Inferior',
                 'section' => 'gc_footer',
                 'settings' => 'gc_footerdown_hover',
             )

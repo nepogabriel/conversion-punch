@@ -20,6 +20,17 @@ function gc_after_setup(){
 
 function gc_widgets() {
 
+    register_sidebar(
+        array(
+            'name' => 'Busca',
+            'id' => 'gc_searchform',
+            'before_widget' => '<div class="blog-search">',
+            'after_widget' => '</div>',
+            'before_title' => '<h5>',
+            'after_title' => '</h5>',
+        )
+    );
+
     register_sidebar( array(
         'name' => 'Sidebar Lateral',
         'id' => 'gc_sidebar',

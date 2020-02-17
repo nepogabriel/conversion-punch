@@ -9,6 +9,8 @@
         </div>
     </div>
 
+    <hr class="line_footer">
+
     <div class="footer_down">
         <div class="container">
             <p><strong><?php bloginfo('name'); ?></strong> | &copy; Todos os direitos reservados.</p>

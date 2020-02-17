@@ -1,7 +1,7 @@
 <div class="col-sm-3 sidebar">
     <sidebar>
 
-        <?php get_search_form(); ?>
+        <?php dynamic_sidebar('Busca'); ?>
 
         <?php
             if(is_active_sidebar('gc_sidebar')) {
