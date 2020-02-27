@@ -1,4 +1,10 @@
 <?php
+//Register Custom Navigation Walker
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
 function gc_theme_styles(){
     //CSS
     wp_enqueue_style("bootstrap_css", get_template_directory_uri().'/assets/css/bootstrap.min.css');
@@ -42,8 +48,38 @@ function gc_widgets() {
     ));
 
     register_sidebar( array(
-        'name' => 'Sidebar Rodapé',
-        'id' => 'gc_footersidebar',
+        'name' => 'Widget 1 Rodapé',
+        'id' => 'gc_footer1',
+        'description' => 'Sidebar Rodapé',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget_title">',
+        'after_title' => '</h4>'
+    ));
+
+    register_sidebar( array(
+        'name' => 'Widget 2 Rodapé',
+        'id' => 'gc_footer2',
+        'description' => 'Sidebar Rodapé',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget_title">',
+        'after_title' => '</h4>'
+    ));
+
+    register_sidebar( array(
+        'name' => 'Widget 3 Rodapé',
+        'id' => 'gc_footer3',
+        'description' => 'Sidebar Rodapé',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget_title">',
+        'after_title' => '</h4>'
+    ));
+
+    register_sidebar( array(
+        'name' => 'Widget 4 Rodapé',
+        'id' => 'gc_footer4',
         'description' => 'Sidebar Rodapé',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',

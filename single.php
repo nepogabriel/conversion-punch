@@ -1,14 +1,13 @@
 <?php
 get_header();
-
-//Banner Single
+get_template_part('template_parts/default-header');
 get_template_part('template_parts/banner-single');
 ?>
 
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-9 moreposts">
+            <div class="col-12 col-lg-9 moreposts">
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
                     <?php if(have_posts()): ?>
@@ -88,4 +87,7 @@ get_template_part('template_parts/banner-single');
     </div>
 </section>
 
-<?php get_footer(); ?>
+<?php
+get_template_part('template_parts/default-footer');
+get_footer();
+?>

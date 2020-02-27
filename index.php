@@ -1,7 +1,6 @@
 <?php
 get_header();
-
-//Banner Home
+get_template_part('template_parts/default-header');
 get_template_part('template_parts/banner-home');
 ?>
 
@@ -59,7 +58,7 @@ get_template_part('template_parts/banner-home');
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-9 moreposts">
+            <div class="col-12 col-lg-9 moreposts">
                 <?php if(have_posts()): ?>
                     <?php while(have_posts()): ?>
                         <?php the_post(); ?>
@@ -77,7 +76,7 @@ get_template_part('template_parts/banner-home');
                                 'total' => $wp_query->max_num_pages,
                                 'show_all' => false,
                                 'end_size' => 1, //padrão
-                                'mid_size' => 2, //padrão
+                                'mid_size' => 1, //padrão é 2
                                 'prev_next' => true, //padrão
                                 'prev_text' => '<i class="fa fa-angle-left"></i>',
                                 'next_text' => '<i class="fa fa-angle-right"></i>'
@@ -90,15 +89,13 @@ get_template_part('template_parts/banner-home');
                 
             </div>
 
-            <!--<div class="loadmoreButton">
-                <i class="fa fa-angle-down fa-lg"></i>
-                Carregar Mais...
-            </div>-->
-
             <?php get_sidebar(); ?>
 
         </div>
     </div>
 </section>
 
-<?php get_footer(); ?>
+<?php
+get_template_part('template_parts/default-footer');
+get_footer();
+?>

@@ -3,44 +3,49 @@ function gc_colors_customizer( $wp_customize ) {
 
 //Settings
     //Header
-    $wp_customize->add_setting('gc_linetop', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_menu', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_menu_decoration', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_linetop', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_menu', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_menu_decoration', array('default' => '#bc0d3c'));
 
-    $wp_customize->add_setting('gc_barcta', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_barcta_hover', array('default' => '#04c471'));
-    $wp_customize->add_setting('gc_barcta_text', array('default' => '#04c471'));
-    $wp_customize->add_setting('gc_barcta_text_hover', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_barcta_button', array('default' => '#04c471'));
-    $wp_customize->add_setting('gc_barcta_button_hover', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_barcta_button_text', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_barcta_button_text_hover', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_barcta', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_barcta_hover', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_barcta_text', array('default' => '#ffffff'));
+    $wp_customize->add_setting('gc_barcta_text_hover', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_barcta_button', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_barcta_button_hover', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_barcta_button_text', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_barcta_button_text_hover', array('default' => '#000000'));
 
-    //Loop de Posts
-    $wp_customize->add_setting('gc_cat_author_hr', array('default' => '#04c471'));
-    $wp_customize->add_setting('gc_titlepost', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_pagination', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_bg_pagination', array('default' => '#04c471'));
+    //Loop de Posts FALTA AQUI
+    $wp_customize->add_setting('gc_cat_author_hr', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_titlepost', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_pagination', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_bg_pagination', array('default' => '#bc0d3c'));
 
     //Search Form
-    $wp_customize->add_setting('gc_form_control', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_icon_search', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_form_control', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_icon_search', array('default' => '#bc0d3c'));
 
     //Sidebar
-    $wp_customize->add_setting('gc_bg_sidebar', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_sidebar_text', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_bg_sidebar', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_sidebar_text', array('default' => '#bc0d3c'));
 
     //Footer
-    $wp_customize->add_setting('gc_footerup', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_footerup_title', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_footerup', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_footerup_title', array('default' => '#bc0d3c'));
     $wp_customize->add_setting('gc_footerup_text', array('default' => '#fff'));
 
-    $wp_customize->add_setting('gc_line_footer', array('default' => '#04c471'));
+    $wp_customize->add_setting('gc_line_footer', array('default' => '#bc0d3c'));
 
-    $wp_customize->add_setting('gc_footerdown', array('default' => '#03072b'));
-    $wp_customize->add_setting('gc_footerdown_hover', array('default' => '#04c471'));
-    $wp_customize->add_setting('gc_footerdown_text', array('default' => '#04c471'));
-    $wp_customize->add_setting('gc_footerdown_text_hover', array('default' => '#03072b'));
+    $wp_customize->add_setting('gc_footerdown', array('default' => '#111111'));
+    $wp_customize->add_setting('gc_footerdown_hover', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_footerdown_text', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_footerdown_text_hover', array('default' => '#111111'));
+
+    //Page Links
+    $wp_customize->add_setting('gc_gradient1', array('default' => '#002749'));
+    $wp_customize->add_setting('gc_gradient2', array('default' => '#00bc96'));
+    //$wp_customize->add_setting('gc_direction', array('default' => 'right'));
 
 //Panel
     $wp_customize->add_panel('gc_colors_panel', array(
@@ -87,6 +92,13 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_section('gc_footer', array(
         'title' => 'Rodapé',
         'priority' => 7,
+        'panel' => 'gc_colors_panel'
+    ));
+
+    //Page Links
+    $wp_customize->add_section('gc_page_links', array(
+        'title' => 'Page Links',
+        'priority' => 8,
         'panel' => 'gc_colors_panel'
     ));
 
@@ -455,5 +467,47 @@ function gc_colors_customizer( $wp_customize ) {
             )
         )
     );
+
+    //PAGE LINKS
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_gradient1',
+            array(
+                'label' => 'Background 1',
+                'section' => 'gc_page_links',
+                'settings' => 'gc_gradient1',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_gradient2',
+            array(
+                'label' => 'Background 2',
+                'section' => 'gc_page_links',
+                'settings' => 'gc_gradient2',
+            )
+        )
+    );
+        
+    /* Ñ TA FUNCIONANDO 
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_direction',
+            array(
+                'label' => 'Direção Gradiente',
+                'section' => 'gc_page_links',
+                'settings' => 'gc_direction',
+                'type' => 'select',
+                'choices' => array(
+                    'top' => 'Topo'
+                )
+            )
+        )
+    );*/
 
 }

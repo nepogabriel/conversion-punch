@@ -1,7 +1,7 @@
 <article <?php post_class(); ?>>
     <div class="row">
 
-        <div class="col-sm-5">
+        <div class=" col-12 col-md-5">
             <?php if(has_post_thumbnail()): ?>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('large', array('class' => 'post_thumb')); ?>
@@ -9,7 +9,7 @@
             <?php endif; ?>
         </div>
 
-        <div class="col-sm-7">
+        <div class="col-12 col-md-7">
             <div class="post_category">
                 <h6><i class="fa fa-folder"></i> &nbsp; <?php the_category(', '); ?></h6>
             </div>

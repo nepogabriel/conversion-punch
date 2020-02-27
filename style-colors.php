@@ -1,14 +1,14 @@
 <style type="text/css">
-/* POSSIVEL COR PARA O TEMPLATE: #bc0d3c #000000;*/
+/* POSSIVEL COR PARA O TEMPLATE: #bc0d3c #1f1f1f;*/
 /* HEADER */
 .top_header {
     background-color: <?php echo get_theme_mod('gc_linetop'); ?>;
 }
 
-.menuarea nav li a {
+/*.menuarea nav li a {
     text-decoration-color: <?php echo get_theme_mod('gc_menu_decoration'); ?>;
     color: <?php echo get_theme_mod('gc_menu'); ?>;
-}
+}*/
 
 .banner {
     background-image: url('<?php echo get_theme_mod('gc_emailtop_bg'); ?>');

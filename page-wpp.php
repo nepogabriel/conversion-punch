@@ -1,24 +1,23 @@
 <?php
+/* Template name: Captura WhatsApp */
 get_header();
-get_template_part('template_parts/default-header');
-get_template_part('template_parts/banner-single');
 ?>
 
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-9 moreposts">
+            <div class="moreposts">
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
                     <?php if(have_posts()): ?>
                         <?php while(have_posts()): ?>
                             <?php the_post(); ?>
                     
-                                <h1 class="title-p-s"> <?php the_title(); ?> </h1>
+                                <h1 class="title-p-s my-5 text-center"><strong> <?php the_title(); ?> </strong></h1>
 
                                 <hr>
 
-                                <div class="post_content">
+                                <div class="content_white">
                                     <?php the_content(); ?>
                                 </div>
 
@@ -27,14 +26,8 @@ get_template_part('template_parts/banner-single');
 
                 </div>
             </div>
-
-            <?php get_sidebar(); ?>
-
         </div>
     </div>
 </section>
 
-<?php
-get_template_part('template_parts/default-footer');
-get_footer();
-?>
+<?php get_footer(); ?>

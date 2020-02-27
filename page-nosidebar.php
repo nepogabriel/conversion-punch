@@ -1,7 +1,6 @@
 <?php /* Template name: Sem sidebar */
 get_header();
-
-//Banner Single
+get_template_part('template_parts/default-header');
 get_template_part('template_parts/banner-single');
 ?>
 
@@ -32,4 +31,7 @@ get_template_part('template_parts/banner-single');
     </div>
 </section>
 
-<?php get_footer(); ?>
+<?php
+get_template_part('template_parts/default-footer');
+get_footer();
+?>
