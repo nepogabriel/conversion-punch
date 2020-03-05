@@ -6,8 +6,8 @@
 }
 
 /*.menuarea nav li a {
-    text-decoration-color: <?php echo get_theme_mod('gc_menu_decoration'); ?>;
-    color: <?php echo get_theme_mod('gc_menu'); ?>;
+    text-decoration-color: <?php // echo get_theme_mod('gc_menu_decoration'); ?>;
+    color: <?php // echo get_theme_mod('gc_menu'); ?>;
 }*/
 
 .banner {
