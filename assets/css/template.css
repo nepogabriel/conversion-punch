@@ -27,6 +27,7 @@ header {
 .navbar-light .navbar-nav .nav-link {
     color: #111111;
     font-weight: 600;
+    margin-left: 5px;
 }
 
 
@@ -61,7 +62,7 @@ header {
 .banner h2 {
     font-size: 30px;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 25px;
     line-height: 38px;
 }
 
@@ -137,7 +138,7 @@ header {
 .hero-image {
     height: 250px;
     width: auto;
-    margin: 40px 5px 10px 5px;
+    margin: 20px auto 20px auto;
 }
 
 /*DEPOSITIONS*/
@@ -276,7 +277,8 @@ hr {
 }
 
 .form-control{
-    border: 1px solid #111111
+    border: 1px solid #111111;
+    outline: 0;
 }
 
 .btn_search {
@@ -641,10 +643,10 @@ hr {
     max-width: 400px;
 } */
 
-.group-links .list-itens {
+/* .group-links .list-itens {
     display: flex;
     justify-content: center;
-}
+} */
 
 .group-links ul,
 .group-links ul li {
@@ -653,7 +655,7 @@ hr {
 
 .link-item {
     border: 2px solid #fff;
-    width: 600px;
+    max-width: 600px;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 10px;

@@ -1,5 +1,5 @@
 <?php
-/* Template name: Page 1 Telegram */
+/* Template name: Page Captura Telegram */
 get_header();
 ?>
 
@@ -51,6 +51,7 @@ body {
     padding: 15px;
     border-radius: 5px;
     max-width: 325px;
+    text-transform: uppercase;
 }
 
 .btn_cel:hover {

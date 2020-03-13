@@ -1,8 +1,8 @@
 <section>
     <div class="banner">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5">
+            <div class="row d-flex align-items-center">
+                <div class="col-sm-5 d-flex align-items-center">
                     <?php if(get_theme_mod('gc_email_img')): ?>
                         <img src="<?php echo get_theme_mod('gc_email_img'); ?>" class="hero-image mx-auto d-block">
                     <?php endif; ?>

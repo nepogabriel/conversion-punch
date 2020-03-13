@@ -1,11 +1,12 @@
 <?php
-/* Template name: 1-Captura Telegram */
+/* Template name: Page Captura WhatsApp */
 get_header();
 ?>
 
 <style type="text/css">
 body {
-    background: linear-gradient(to right,#34af23,#32afed);
+    background: linear-gradient(to right,<?php if(get_theme_mod('gc_bgl_1')): echo get_theme_mod('gc_bgl_1'); else: ?> #00bc96 <?php endif; ?>,
+    <?php if(get_theme_mod('gc_bgr_1')): echo get_theme_mod('gc_bgr_1'); else: ?> #32afed <?php endif; ?>);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -43,17 +44,19 @@ body {
 }
 
 .btn_cel {
-    background-color: #34af23;
-    color: #fff;
+    background-color: <?php if(get_theme_mod('gc_btn_1')): echo get_theme_mod('gc_btn_1'); else: ?> #32afed <?php endif; ?>;
+    color: <?php if(get_theme_mod('gc_btn_txt_1')): echo get_theme_mod('gc_btn_txt_1'); else: ?> #fff <?php endif; ?>;
     font-weight: 600;
     display: inline-block;
     padding: 15px;
     border-radius: 5px;
+    max-width: 325px;
+    text-transform: uppercase;
 }
 
 .btn_cel:hover {
-    color: #34af23;
-    box-shadow: 0 0 0 3px #34af23;
+    color: <?php if(get_theme_mod('gc_btn_hover_1')): echo get_theme_mod('gc_btn_hover_1'); else: ?> #002749 <?php endif; ?>;
+    box-shadow: 0 0 0 3px <?php if(get_theme_mod('gc_btn_hover_1')): echo get_theme_mod('gc_btn_hover_1'); else: ?> #002749 <?php endif; ?>;
     background: transparent;
 }
 </style>
@@ -63,18 +66,83 @@ body {
     <section id="cap_cel" class="text-center">
         <?php if(has_custom_logo()) { the_custom_logo(); } ?>
 
-        <h1 class="title_cel"><strong> Título da Página de Captura Aqui! </strong></h1>
+        <h1 class="title_cel">
+            <strong>
+                <?php
+                    if(get_theme_mod('gc_title_1')):
+                    
+                    echo get_theme_mod('gc_title_1');
+                    
+                    else:
+                ?> 
+
+                    Título da Página de Captura Aqui!
+
+                <?php endif; ?> 
+            </strong>
+        </h1>
         
-        <p class="text_cel">Texto para fazer uma chamada para ação aqui</p>
+        <p class="text_cel">
+            <?php
+                if(get_theme_mod('gc_description_1')):
+                    
+                echo get_theme_mod('gc_description_1');
+            ?> 
+
+            <?php else: ?> 
+
+                Texto para fazer uma chamada para ação aqui!
+
+            <?php endif; ?>
+        </p>
     </section>
 
     <section id="body_cel" class="text-center">
         <div class="area_cel">
-            <p class="text_cta"> teste aqui ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI!</p>
+
+            <p class="text_cta">
+                <?php
+                    if(get_theme_mod('gc_description_1')):
+                    
+                    echo get_theme_mod('gc_description_1');
+                ?> 
+
+                <?php else: ?> 
+
+                    ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI! ALGUM TEXTO AQUI!
+
+                <?php endif; ?>
+            </p>
+
             <div class="btn_cel">
-                ENTRAR NO GRUPO DO TELEGRAM &nbsp; <i class="fa fa-whatsapp fa-lg"></i>
+            <?php
+                    if(get_theme_mod('gc_txt_btn_1')):
+                    
+                    echo get_theme_mod('gc_txt_btn_1').'&nbsp; <i class="fa fa-telegram fa-lg"></i>';
+                ?> 
+
+                <?php else: ?> 
+
+                    ENTRAR NO GRUPO DO WHATSAPP &nbsp; <i class="fa fa-whatsapp fa-lg"></i>
+
+                <?php endif; ?>
+
+                
             </div>
-            <p class="text_obs">*Link 100% seguro!</p>
+            <p class="text_obs">
+                <?php
+                    if(get_theme_mod('gc_obs_1')):
+                    
+                    echo get_theme_mod('gc_obs_1');
+                ?> 
+
+                <?php else: ?> 
+
+                    *Link 100% seguro!
+
+                <?php endif; ?>
+            </p>
+
         </div>
     </section>
 
