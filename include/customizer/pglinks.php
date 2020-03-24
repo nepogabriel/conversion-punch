@@ -31,28 +31,27 @@ function gc_pglinks_customizer( $wp_customize ) {
     
 
     //Fields
-    $wp_customize->add_setting('gc_field1', array('default' => 'Campo 1'));
-    $wp_customize->add_setting('gc_field2', array('default' => 'Campo 2'));
-    $wp_customize->add_setting('gc_field3', array('default' => 'Campo 3'));
-    $wp_customize->add_setting('gc_field4', array('default' => 'Campo 4'));
-    $wp_customize->add_setting('gc_field5', array('default' => 'Campo 5'));
-    $wp_customize->add_setting('gc_field6', array('default' => 'Campo 6'));
-    $wp_customize->add_setting('gc_field7', array('default' => 'Campo 7'));
-    $wp_customize->add_setting('gc_field8', array('default' => 'Campo 8'));
-    $wp_customize->add_setting('gc_field9', array('default' => 'Campo 9'));
-    $wp_customize->add_setting('gc_field10', array('default' => 'Campo 10'));
-    $wp_customize->add_setting('gc_field11', array('default' => 'Campo 11'));
-    $wp_customize->add_setting('gc_field12', array('default' => 'Campo 12'));
-    $wp_customize->add_setting('gc_field13', array('default' => 'Campo 13'));
-    $wp_customize->add_setting('gc_field14', array('default' => 'Campo 14'));
-    $wp_customize->add_setting('gc_field15', array('default' => 'Campo 15'));
-    $wp_customize->add_setting('gc_field16', array('default' => 'Campo 16'));
-    $wp_customize->add_setting('gc_field17', array('default' => 'Campo 17'));
-    $wp_customize->add_setting('gc_field18', array('default' => 'Campo 18'));
-    $wp_customize->add_setting('gc_field19', array('default' => 'Campo 19'));
-    $wp_customize->add_setting('gc_field20', array('default' => 'Campo 20'));
+    $wp_customize->add_setting('gc_field1', array('default' => ''));
+    $wp_customize->add_setting('gc_field2', array('default' => ''));
+    $wp_customize->add_setting('gc_field3', array('default' => ''));
+    $wp_customize->add_setting('gc_field4', array('default' => ''));
+    $wp_customize->add_setting('gc_field5', array('default' => ''));
+    $wp_customize->add_setting('gc_field6', array('default' => ''));
+    $wp_customize->add_setting('gc_field7', array('default' => ''));
+    $wp_customize->add_setting('gc_field8', array('default' => ''));
+    $wp_customize->add_setting('gc_field9', array('default' => ''));
+    $wp_customize->add_setting('gc_field10', array('default' => ''));
+    $wp_customize->add_setting('gc_field11', array('default' => ''));
+    $wp_customize->add_setting('gc_field12', array('default' => ''));
+    $wp_customize->add_setting('gc_field13', array('default' => ''));
+    $wp_customize->add_setting('gc_field14', array('default' => ''));
+    $wp_customize->add_setting('gc_field15', array('default' => ''));
+    $wp_customize->add_setting('gc_field16', array('default' => ''));
+    $wp_customize->add_setting('gc_field17', array('default' => ''));
+    $wp_customize->add_setting('gc_field18', array('default' => ''));
+    $wp_customize->add_setting('gc_field19', array('default' => ''));
+    $wp_customize->add_setting('gc_field20', array('default' => ''));
     
-
 
     //Sections
     $wp_customize->add_section('gc_pglinks_section', array(
@@ -109,248 +108,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
-    //LINKS
+    //LINKS and FIELDS
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
             'gc_link1',
             array(
-                'label' => 'Campo 1',
+                'label' => 'Link do Campo 1',
                 'section' => 'gc_pglinks_section',
                 'settings' => 'gc_link1',
             )
         )
     );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link2',
-            array(
-                'label' => 'Campo 2',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link2',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link3',
-            array(
-                'label' => 'Campo 3',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link3',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link4',
-            array(
-                'label' => 'Campo 4',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link4',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link5',
-            array(
-                'label' => 'Campo 5',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link5',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link6',
-            array(
-                'label' => 'Campo 6',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link6',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link7',
-            array(
-                'label' => 'Campo 7',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link7',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link8',
-            array(
-                'label' => 'Campo 8',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link8',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link9',
-            array(
-                'label' => 'Campo 9',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link9',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link10',
-            array(
-                'label' => 'Campo 10',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link10',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link11',
-            array(
-                'label' => 'Campo 11',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link11',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link12',
-            array(
-                'label' => 'Campo 12',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link12',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link13',
-            array(
-                'label' => 'Campo 13',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link13',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link14',
-            array(
-                'label' => 'Campo 14',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link14',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link15',
-            array(
-                'label' => 'Campo 15',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link15',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link16',
-            array(
-                'label' => 'Campo 16',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link16',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link17',
-            array(
-                'label' => 'Campo 17',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link17',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link18',
-            array(
-                'label' => 'Campo 18',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link18',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link19',
-            array(
-                'label' => 'Campo 19',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link19',
-            )
-        )
-    );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_link20',
-            array(
-                'label' => 'Campo 20',
-                'section' => 'gc_pglinks_section',
-                'settings' => 'gc_link20',
-            )
-        )
-    );
-
-    //FIELDS
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -363,6 +132,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link2',
+            array(
+                'label' => 'Link do Campo 2',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link2',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -374,7 +155,19 @@ function gc_pglinks_customizer( $wp_customize ) {
             )
         )
     );
+    
 
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link3',
+            array(
+                'label' => 'Link do Campo 3',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link3',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -387,6 +180,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link4',
+            array(
+                'label' => 'Link do Campo 4',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link4',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -399,6 +204,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link5',
+            array(
+                'label' => 'Link do Campo 5',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link5',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -411,6 +228,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link6',
+            array(
+                'label' => 'Link do Campo 6',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link6',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -423,6 +252,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link7',
+            array(
+                'label' => 'Link do Campo 7',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link7',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -435,6 +276,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link8',
+            array(
+                'label' => 'Link do Campo 8',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link8',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -447,6 +300,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link9',
+            array(
+                'label' => 'Link do Campo 9',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link9',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -459,6 +324,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link10',
+            array(
+                'label' => 'Link do Campo 10',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link10',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -471,6 +348,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link11',
+            array(
+                'label' => 'Link do Campo 11',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link11',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -483,6 +372,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link12',
+            array(
+                'label' => 'Link do Campo 12',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link12',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -495,6 +396,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link13',
+            array(
+                'label' => 'Link do Campo 13',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link13',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -507,6 +420,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link14',
+            array(
+                'label' => 'Link do Campo 14',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link14',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -519,6 +444,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link15',
+            array(
+                'label' => 'Link do Campo 15',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link15',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -542,7 +479,30 @@ function gc_pglinks_customizer( $wp_customize ) {
             )
         )
     );
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link16',
+            array(
+                'label' => 'Link do Campo 16',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link16',
+            )
+        )
+    );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link17',
+            array(
+                'label' => 'Link do Campo 17',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link17',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -555,6 +515,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link18',
+            array(
+                'label' => 'Link do Campo 18',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link18',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -567,6 +539,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link19',
+            array(
+                'label' => 'Link do Campo 19',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link19',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -579,6 +563,18 @@ function gc_pglinks_customizer( $wp_customize ) {
         )
     );
 
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'gc_link20',
+            array(
+                'label' => 'Link do Campo 20',
+                'section' => 'gc_pglinks_section',
+                'settings' => 'gc_link20',
+            )
+        )
+    );
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,

@@ -29,7 +29,7 @@ body {
             <?php endif; ?>
 
             <?php if(get_theme_mod('gc_user')): ?>
-                <p class="user">
+                <p class="pl-user">
                     <?php echo get_theme_mod('gc_user'); ?>
                 </p>
             <?php endif; ?>
@@ -159,139 +159,177 @@ body {
         <div class="group-links d-flex justify-content-center">
             <ul class="list-itens">
 
-            <?php
-                    if(get_theme_mod('gc_title_1')):
+            <!-- <?php
+                    // if(get_theme_mod('gc_title_1')):
                     
-                    echo get_theme_mod('gc_title_1');
+                    // echo get_theme_mod('gc_title_1');
                     
-                    else:
+                    // else:
                 ?> 
 
                     Título da Página de Captura Aqui
 
-                <?php endif; ?> 
+                <?php //endif; ?>  -->
 
-                <li class="link-item">
-                    <?php if(get_theme_mod('gc_field1')): ?>
-                        <a href="<?php echo get_theme_mod('gc_link1'); ?>">
-                            <?php echo get_theme_mod('gc_field1'); ?>Coloque esta página com vários links na sua bio do instagram!
+                <?php if(get_theme_mod('gc_field1')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link1'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field1'); ?>
                         </a>
-                    <?php endif; ?>
-                </li>
+                    </li>
+                <?php endif; ?>
+                
+                <?php if(get_theme_mod('gc_field2')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link2'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field2'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                
+                <?php if(get_theme_mod('gc_field3')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link3'); ?>" target="_blank">
+                        <?php echo get_theme_mod('gc_field3'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                
+                <?php if(get_theme_mod('gc_field4')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link4'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field4'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                
+                <?php if(get_theme_mod('gc_field5')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link5'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field5'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                
+                <?php if(get_theme_mod('gc_field6')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link6'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field6'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                
+                <?php if(get_theme_mod('gc_field7')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link7'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field7'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                
+                <?php if(get_theme_mod('gc_field8')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link8'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field8'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link2'); ?>">
-                        Faça uma chamada para ação!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field9')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link9'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field9'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link3'); ?>">
-                        Adicione um link aqui!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field10')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link10'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field10'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link4'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field11')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link11'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field11'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link5'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field12')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link12'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field12'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link6'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field13')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link13'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field13'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link7'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field14')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link14'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field14'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link8'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field15')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link15'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field15'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link9'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field16')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link16'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field16'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link10'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field17')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link17'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field17'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link11'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field18')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link18'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field18'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link12'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field19')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link19'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field19'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
 
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link13'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
-
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link14'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
-
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link15'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
-
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link16'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
-
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link17'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
-
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link18'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
-
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link19'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
-
-                <li class="link-item">
-                    <a href="<?php echo get_theme_mod('gc_link20'); ?>">
-                        Adicione Links de promoção!
-                    </a>
-                </li>
+                <?php if(get_theme_mod('gc_field20')): ?>
+                    <li class="link-item">
+                        <a href="<?php echo get_theme_mod('gc_link20'); ?>" target="_blank">
+                            <?php echo get_theme_mod('gc_field20'); ?>
+                        </a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
 

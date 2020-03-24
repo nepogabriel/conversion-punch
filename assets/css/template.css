@@ -412,11 +412,6 @@ hr {
     box-shadow: 0px 3px 5px #3a3a3a;
 }
 
-.list-social .item a.bg-pinte:hover {
-    background: #cb2027;
-    box-shadow: 0px 3px 5px #3a3a3a;
-}
-
 .list-social .item a.bg-lkd:hover {
     background: #0976b4;
     box-shadow: 0px 3px 5px #3a3a3a;
@@ -479,7 +474,7 @@ hr {
 }
 
 .post_content {
-    margin: 20px 0 50px 0;
+    margin: 0;
 }
 
 .post_content img {
@@ -490,6 +485,34 @@ hr {
 .post_related {
     margin-bottom: 20px;
 }
+
+/************ SHARE SOCIAL ************/
+.content .list_share {
+    margin: 0;
+    text-align: left;
+    padding-left: 0;
+}
+
+.list_share .item {
+    margin: 20px 8px 15px 8px;
+}
+
+.list_share .item-0 {
+    margin-left: 0;
+}
+
+.list_share .item a {
+    border-radius: 15%;
+}
+
+.list_share .item a img {
+   padding-bottom: 5px;
+}
+
+.list_share .item a.bg-mssg:hover {
+    background: #20b9eb;
+    box-shadow: 0px 3px 5px #3a3a3a;
+} 
 
 /*POSTS RELATED*/
 .post_related_item {
@@ -595,16 +618,17 @@ hr {
     height: 45px;
     font-size: 16px;
     font-weight: 500;
-    color: #04c471;
-    background-color: #03072b;
+    color: #bc0d3c;
+    background: transparent;
     border: 0;
     padding: 0 23px 0 23px;
+    box-shadow: 0 0px 0px 2px #111111;
 }
 
 .comment-respond .submit:hover {
-    box-shadow: 0 0px 0px 3px #04c471;
+    color: #111111;
+    box-shadow: 0 0px 0px 3px #bc0d3c;
 }
-
 
 /************ PAGE LINKS ************
 #page-links {
@@ -625,7 +649,7 @@ hr {
     box-shadow: 0 0 0 3px #fff;
 }
 
-.area-author .userinsta {
+.area-author .pl-user {
     font-size: 30px;
     font-weight: bolder;
     color: #fff;
@@ -677,6 +701,8 @@ hr {
     font-size: 18px;
 }
 
+
+
 /*Tablet Vertical*/
 @media (min-width:481px) and (max-width:767px) {
     .navbar-light .navbar-nav .nav-link:hover,
@@ -700,5 +726,9 @@ hr {
     .navbar-light .navbar-nav .nav-link.show,
     .navbar-light .navbar-nav .show>.nav-link {
         border-bottom: none;
+    }
+
+    .post_category {
+        margin-top: 15px;
     }
 }

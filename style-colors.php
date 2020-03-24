@@ -116,6 +116,7 @@ hr {
 }
 
 .comment-respond .submit:hover {
+    color: <?php echo get_theme_mod('gc_titlepost'); ?>;
     box-shadow: 0 0px 0px 3px <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
 }
 
