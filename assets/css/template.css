@@ -361,9 +361,9 @@ hr {
     height: 50px;
     padding-top: 7px;
     padding-bottom: 6px;
-    background: #ccc;
+    /* background: #ccc;
     color: #fff;
-    box-shadow: 0px 1px 5px #252525;
+    box-shadow: 0px 1px 5px #252525; */
     border-radius: 50%;
 }
 
@@ -491,6 +491,7 @@ hr {
     margin: 0;
     text-align: left;
     padding-left: 0;
+    max-width: 800px;
 }
 
 .list_share .item {
@@ -503,16 +504,87 @@ hr {
 
 .list_share .item a {
     border-radius: 15%;
+    box-shadow: none;
+}
+
+.list_share .item a:hover {
+    box-shadow: none!important;
 }
 
 .list_share .item a img {
    padding-bottom: 5px;
 }
 
+.list_share .item a.bg-face {
+    background: transparent;
+    color: #3b5998;
+    border: 2px solid #3b5998;
+}
+.list_share .item a.bg-face:hover {
+    color: #fff;
+}
+
+.list_share .item a.bg-mssg {
+    background: transparent;
+    border: 2px solid #20b9eb;
+}
 .list_share .item a.bg-mssg:hover {
-    background: #20b9eb;
-    box-shadow: 0px 3px 5px #3a3a3a;
-} 
+     background: #20b9eb;
+}
+
+.list_share .item a.bg-wpp {
+    background: transparent;
+    color: #34af23;
+    border: 2px solid #34af23;
+}
+.list_share .item a.bg-wpp:hover {
+    color: #fff;
+}
+
+.list_share .item a.bg-tele {
+    background: transparent;
+    color: #32afed;
+    border: 2px solid #32afed;
+}
+.list_share .item a.bg-tele:hover {
+    color: #fff;
+}
+
+.list_share .item a.bg-pinte {
+    background: transparent;
+    color: #cb2027;
+    border: 2px solid #cb2027;
+}
+.list_share .item a.bg-pinte:hover {
+    color: #fff;
+}
+
+.list_share .item a.bg-lkd {
+    background: transparent;
+    color: #0976b4;
+    border: 2px solid #0976b4;
+}
+.list_share .item a.bg-lkd:hover {
+    color: #fff;
+}
+
+.list_share .item a.bg-insta {
+    background: transparent;
+    color: #517fa4;
+    border: 2px solid #517fa4;
+}
+.list_share .item a.bg-insta:hover {
+    color: #fff;
+}
+
+.list_share .item a.bg-tt {
+    background: transparent;
+    color: #00aced;
+    border: 2px solid #00aced;
+}
+.list_share .item a.bg-tt:hover {
+    color: #fff;
+}
 
 /*POSTS RELATED*/
 .post_related_item {

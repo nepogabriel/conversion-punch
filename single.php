@@ -32,14 +32,14 @@ get_template_part('template_parts/banner-single');
                     <?php
                         the_post_thumbnail('large', array('class' => 'img-fluid post_thumb'));
                                 
-                        get_template_part('template_parts/share-social');
+                        get_template_part('template_parts/share_social1');
                     ?>
 
                     <div class="post_content">
                         <?php the_content(); ?>
                     </div>
 
-                    <?php get_template_part('template_parts/share-social'); ?>
+                    <?php //get_template_part('template_parts/share_social2'); ?>
 
                     <hr>
 
