@@ -1,6 +1,5 @@
 <?php
-function gc_pgtele1_customizer( $wp_customize ) {
-
+function gc_captele_customizer( $wp_customize ) {
     //SETTINGS
     //Texts
     $wp_customize->add_setting('gc_title_1', array('default' => ''));
@@ -150,5 +149,4 @@ function gc_pgtele1_customizer( $wp_customize ) {
             )
         )
     );
-
 }

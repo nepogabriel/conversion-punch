@@ -11,7 +11,7 @@ body {
             
             <?php
             if(get_theme_mod('gc_bgl_1')):
-                echo get_theme_mod('gc_bgl_1')
+                echo get_theme_mod('gc_bgl_1');
             else:
             ?>
             
