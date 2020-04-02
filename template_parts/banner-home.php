@@ -4,7 +4,13 @@
             <div class="row d-flex align-items-center">
                 <div class="col-sm-5 d-flex align-items-center">
                     <?php if(get_theme_mod('gc_email_img')): ?>
+                        
                         <img src="<?php echo get_theme_mod('gc_email_img'); ?>" class="hero-image mx-auto d-block">
+
+                    <?php else: ?>
+
+                        <img src="<?php echo get_template_directory_uri().'/assets/img/ebook.png' ?>" class="hero-image mx-auto d-block">
+                    
                     <?php endif; ?>
                 </div>
 

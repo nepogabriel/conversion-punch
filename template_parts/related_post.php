@@ -6,7 +6,10 @@
                 <!-- Miniatura do post (imagem) -->
                 <?php if(has_post_thumbnail()): ?>
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('large', array('class' => 'post_thumb')); ?>
+                    <?php  
+                        //the_post_thumbnail('large', array('class' => 'post_thumb'));
+                        the_post_thumbnail('gc-thumb-small');
+                    ?>
                 </a>
                 <?php endif; ?>
                 

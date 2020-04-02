@@ -8,7 +8,10 @@ function gc_email_customizer( $wp_customize ) {
     $wp_customize->add_setting('gc_email_text', array('default' => ''));
     $wp_customize->add_setting('gc_email_text2', array('default' => ''));
     $wp_customize->add_setting('gc_email_textobs', array('default' => ''));
-    $wp_customize->add_setting('gc_email_iconobs', array('default' => ''));
+    $wp_customize->add_setting('gc_email_iconobs', array('default' => '<i class="fa fa-lock"></i>'));
+
+
+    $wp_customize->add_setting('gc_cap_bg_top', array('default' => '#111111'));
 
     //Panel
     $wp_customize->add_panel('gc_capemail_panel', array(
@@ -36,7 +39,9 @@ function gc_email_customizer( $wp_customize ) {
     ));*/
 
     //Controllers
-    /*$wp_customize->add_control(
+
+    /* IMAGEM, MAS NÃO DEU CERTO
+    $wp_customize->add_control(
         new WP_Customize_Cropped_Image_Control(
             $wp_customize,
             'gc_email_img',
@@ -51,14 +56,14 @@ function gc_email_customizer( $wp_customize ) {
         )
     );*/
 
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'gc_email_img',
+    $wp_customize->add_control( 
+        new WP_Customize_Upload_Control( 
+            $wp_customize, 
+            'gc_email_img', 
             array(
-                'label' => 'Imagem',
-                'section' => 'gc_captop_section',
-                'settings' => 'gc_email_img'
+                'label'      => 'Imagem',
+                'section'    => 'gc_captop_section',
+                'settings'   => 'gc_email_img',
             )
         )
     );
@@ -111,14 +116,38 @@ function gc_email_customizer( $wp_customize ) {
         )
     );
 
+    // $wp_customize->add_control(
+    //     new WP_Customize_Control(
+    //         $wp_customize,
+    //         'gc_emailtop_bg',
+    //         array(
+    //             'label' => 'Background IMG',
+    //             'section' => 'gc_captop_section',
+    //             'settings' => 'gc_emailtop_bg'
+    //         )
+    //     )
+    // );
+
     $wp_customize->add_control(
-        new WP_Customize_Control(
+        new WP_Customize_Upload_Control(
             $wp_customize,
             'gc_emailtop_bg',
             array(
-                'label' => 'Background IMG',
+                'label'      => 'Background Imagem',
+                'section'    => 'gc_captop_section',
+                'settings'   => 'gc_emailtop_bg',
+            )
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'gc_cap_bg_top',
+            array(
+                'label' => 'Background Cor',
                 'section' => 'gc_captop_section',
-                'settings' => 'gc_emailtop_bg'
+                'settings' => 'gc_cap_bg_top',
             )
         )
     );
@@ -147,6 +176,5 @@ function gc_email_customizer( $wp_customize ) {
             )
         )
     );*/
-
 
 }

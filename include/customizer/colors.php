@@ -16,6 +16,9 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_setting('gc_barcta_button_text', array('default' => '#bc0d3c'));
     $wp_customize->add_setting('gc_barcta_button_text_hover', array('default' => '#000000'));
 
+    //Captura E-mail Top
+    // $wp_customize->add_setting('gc_cap_bg_top', array('default' => '#111111'));
+
     //Loop de Posts FALTA AQUI
     $wp_customize->add_setting('gc_cat_author_hr', array('default' => '#bc0d3c'));
     $wp_customize->add_setting('gc_titlepost', array('default' => '#111111'));
@@ -66,6 +69,13 @@ function gc_colors_customizer( $wp_customize ) {
         'priority' => 3,
         'panel' => 'gc_colors_panel'
     ));
+
+    //Captura E-mail Top
+    // $wp_customize->add_section('gc_capture_email', array(
+    //     'title' => 'Captura de E-mail Topo',
+    //     'priority' => 20,
+    //     'panel' => 'gc_colors_panel'
+    // ));
 
     //Loop de Posts
     $wp_customize->add_section('gc_loopposts', array(

@@ -29,11 +29,13 @@ get_template_part('template_parts/banner-single');
 
                     <hr>
 
-                    <?php
-                        the_post_thumbnail('large', array('class' => 'img-fluid post_thumb'));
-                                
-                        get_template_part('template_parts/share_social1');
-                    ?>
+                    <div class="text-center">
+                        <?php
+                            the_post_thumbnail('large', array('class' => 'img-fluid post_thumb'));
+                                    
+                            get_template_part('template_parts/share_social1');
+                        ?>
+                    </div>
 
                     <div class="post_content">
                         <?php the_content(); ?>

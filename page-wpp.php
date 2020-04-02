@@ -5,8 +5,31 @@ get_header();
 
 <style type="text/css">
 body {
-    background: linear-gradient(to right,<?php if(get_theme_mod('gc_bgl_1')): echo get_theme_mod('gc_bgl_1'); else: ?> #00bc96 <?php endif; ?>,
-    <?php if(get_theme_mod('gc_bgr_1')): echo get_theme_mod('gc_bgr_1'); else: ?> #32afed <?php endif; ?>);
+    background:
+        linear-gradient(
+            to right,
+
+            <?php 
+            if(get_theme_mod('gc_bgl_wpp')):
+                echo get_theme_mod('gc_bgl_wpp'); 
+            else:
+            ?> 
+            
+            #00bc96 
+            
+            <?php endif; ?>,
+
+            <?php 
+            if(get_theme_mod('gc_bgr_wpp')):
+                echo get_theme_mod('gc_bgr_wpp');
+            else:
+            ?> 
+            
+            #32afed 
+            
+            <?php endif; ?>
+        );
+        
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -44,8 +67,28 @@ body {
 }
 
 .btn_cel {
-    background-color: <?php if(get_theme_mod('gc_btn_1')): echo get_theme_mod('gc_btn_1'); else: ?> #32afed <?php endif; ?>;
-    color: <?php if(get_theme_mod('gc_btn_txt_1')): echo get_theme_mod('gc_btn_txt_1'); else: ?> #fff <?php endif; ?>;
+    background-color: 
+        <?php 
+        if(get_theme_mod('gc_btn_wpp')):
+            echo get_theme_mod('gc_btn_wpp');
+        else:
+        ?> 
+
+        #00bc96
+
+        <?php endif; ?>;
+
+    color:
+        <?php
+        if(get_theme_mod('gc_btn_txt_wpp')):
+            echo get_theme_mod('gc_btn_txt_wpp');
+        else:
+        ?> 
+        
+        #fff
+        
+        <?php endif; ?>;
+
     font-weight: 600;
     display: inline-block;
     padding: 15px;
@@ -55,8 +98,28 @@ body {
 }
 
 .btn_cel:hover {
-    color: <?php if(get_theme_mod('gc_btn_hover_1')): echo get_theme_mod('gc_btn_hover_1'); else: ?> #002749 <?php endif; ?>;
-    box-shadow: 0 0 0 3px <?php if(get_theme_mod('gc_btn_hover_1')): echo get_theme_mod('gc_btn_hover_1'); else: ?> #002749 <?php endif; ?>;
+    color:
+        <?php
+        if(get_theme_mod('gc_btn_hover_wpp')):
+            echo get_theme_mod('gc_btn_hover_wpp');
+        else:
+        ?>
+        
+        #002749
+        
+        <?php endif; ?>;
+
+    box-shadow: 0 0 0 3px
+        <?php
+        if(get_theme_mod('gc_btn_hover_wpp')):
+            echo get_theme_mod('gc_btn_hover_wpp');
+        else:
+        ?>
+        
+        #002749
+        
+        <?php endif; ?>;
+
     background: transparent;
 }
 </style>

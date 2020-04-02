@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
 }
 
 .top_header {
@@ -55,7 +55,7 @@ header {
 
 /* BANNER HOME/PAGE/SINGLE*/
 .banner {
-    background-image: url('../img/bg-cap.png');
+    /* background-image: url('../img/bg-cap-top.png'); */
     background-position: center;
 }
 
@@ -201,10 +201,10 @@ article.type-post {
     margin: 45px 0 45px 0;
 }
 
-.post_thumb {
+/* .post_thumb {
     width: 100%;
     height: auto;
-}
+} */
 
 .post_category h6 a {
     color: #bc0d3c;
@@ -524,13 +524,13 @@ hr {
     color: #fff;
 }
 
-.list_share .item a.bg-mssg {
+/* .list_share .item a.bg-mssg {
     background: transparent;
     border: 2px solid #20b9eb;
 }
 .list_share .item a.bg-mssg:hover {
      background: #20b9eb;
-}
+} */
 
 .list_share .item a.bg-wpp {
     background: transparent;
@@ -744,6 +744,13 @@ hr {
     justify-content: center;
 } */
 
+.social-media .list-social .item a {
+    padding-bottom: 6px;
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0px 1px 5px #252525;
+}
+
 .group-links ul,
 .group-links ul li {
     list-style: none;
@@ -773,6 +780,64 @@ hr {
     font-size: 18px;
 }
 
+/*PAGE CONTACT*/
+.wpcf7-form p {
+    margin-bottom: 0;
+}
+
+.wpcf7-form label {
+    max-width: 400px;
+    color: #111111;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+    border-radius: 5px;
+    border: 1px solid #c3c3c3;
+    padding: 8px;
+}
+
+.wpcf7-submit {
+    width: 90px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #bc0d3c;
+    background: transparent;
+    box-shadow: 0 0px 0px 2px #111111;
+}
+
+.wpcf7-submit:hover {
+    color: #111111;
+    box-shadow: 0 0px 0px 2px #bc0d3c;
+}
+
+
+
+/**---------------------------------**
+**--------  OTIMIZANDO CSS  --------**
+/**---------------------------------**
+
+/***************
+**  COLORS
+***************/
+
+
+/***************
+**  BACKGROUND-COLORS
+***************/
+
+
+/***************
+**  BORDER
+***************/
+
+
+/***************
+**  BOX-SHADOW
+***************/
 
 
 /*Tablet Vertical*/

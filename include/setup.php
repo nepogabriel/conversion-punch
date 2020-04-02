@@ -21,6 +21,9 @@ function gc_after_setup(){
     add_theme_support("post-thumbnails");
     add_theme_support("custom-logo");
 
+    add_image_size( 'gc-thumb-small', 254, 254, true );
+    add_image_size( 'gc-thumb-medium', 326, 326, array( 'center', 'center' ) );
+
     register_nav_menu("top", "Menu Principal");
 }
 

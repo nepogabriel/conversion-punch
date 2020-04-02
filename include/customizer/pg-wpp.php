@@ -12,7 +12,7 @@ function gc_pgwpp_customizer( $wp_customize ) {
     //Colors
     $wp_customize->add_setting('gc_bgl_wpp', array('default' => '#00bc96'));
     $wp_customize->add_setting('gc_bgr_wpp', array('default' => '#32afed'));
-    $wp_customize->add_setting('gc_btn_wpp', array('default' => '#32afed'));
+    $wp_customize->add_setting('gc_btn_wpp', array('default' => '#00bc96'));
     $wp_customize->add_setting('gc_btn_hover_wpp', array('default' => '#002749'));
     $wp_customize->add_setting('gc_btn_txt_wpp', array('default' => '#fff'));
 
@@ -118,11 +118,11 @@ function gc_pgwpp_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gc_txt_btn_wpp',
+            'gc_btn_txt_wpp',
             array(
                 'label' => 'Cor do Texto do Botão',
                 'section' => 'gc_wpp_section',
-                'settings' => 'gc_txt_btn_wpp',
+                'settings' => 'gc_btn_txt_wpp',
             )
         )
     );

@@ -10,7 +10,7 @@ function gc_pgtele1_customizer( $wp_customize ) {
     $wp_customize->add_setting('gc_obs_1', array('default' => ''));
 
     //Colors
-    $wp_customize->add_setting('gc_bgl_1', array('default' => '#00bc96'));
+    $wp_customize->add_setting('gc_bgl_1', array('default' => '#40007c'));
     $wp_customize->add_setting('gc_bgr_1', array('default' => '#32afed'));
     $wp_customize->add_setting('gc_btn_1', array('default' => '#32afed'));
     $wp_customize->add_setting('gc_btn_hover_1', array('default' => '#002749'));

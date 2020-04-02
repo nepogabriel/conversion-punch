@@ -43,7 +43,7 @@ body {
         </div>
 
         <div class="social-media">
-            <ul class="list-social">
+            <ul class="list-social pl-social">
 
                 <!-- INSTAGRAM -->
                 <?php if(get_theme_mod('gc_instagram')): ?>

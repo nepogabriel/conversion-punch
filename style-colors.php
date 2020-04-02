@@ -11,7 +11,15 @@
 }*/
 
 .banner {
-    background-image: url('<?php echo get_theme_mod('gc_emailtop_bg'); ?>');
+    <?php if(get_theme_mod('gc_emailtop_bg')): ?>
+
+        background-image: url('<?php echo get_theme_mod('gc_emailtop_bg'); ?>');
+
+    <?php else: ?>
+
+        background-color: <?php echo get_theme_mod('gc_cap_bg_top'); ?>;
+
+    <?php endif; ?>
 }
 
 .barcta {
@@ -150,5 +158,16 @@ hr {
 .footer_down:hover {
     background-color: <?php echo get_theme_mod('gc_footerdown_hover'); ?>;
     color: <?php echo get_theme_mod('gc_footerdown_text_hover'); ?>;
+}
+
+/*PAGE CONTACT*/
+.wpcf7-submit {
+    color: <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
+    background-color: <?php echo get_theme_mod('gc_titlepost'); ?>;
+}
+
+.wpcf7-submit:hover {
+    color: <?php echo get_theme_mod('gc_titlepost'); ?>;
+    box-shadow: 0 0px 0px 3px <?php echo get_theme_mod('gc_cat_author_hr'); ?>;
 }
 </style>

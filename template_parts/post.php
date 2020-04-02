@@ -4,7 +4,10 @@
         <div class=" col-12 col-md-5">
             <?php if(has_post_thumbnail()): ?>
                 <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('large', array('class' => 'post_thumb')); ?>
+                    <?php 
+                        //the_post_thumbnail('medium', array('class' => 'post_thumb'));
+                        the_post_thumbnail('gc-thumb-medium');
+                     ?>
                 </a>
             <?php endif; ?>
         </div>
