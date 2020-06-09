@@ -100,18 +100,17 @@ header {
     height: 45px;
     font-size: 16px;
     font-weight: bold;
-    color: #04c471;
-    background-color: #03072b;
+    color: #bc0d3c;
+    background: transparent;
     border: 0;
-    
     padding: 0 23px 0 23px;
     margin-left: 10px;
-    box-shadow: 2px 2px 8px rgb(22, 22, 22);
+    box-shadow: 0 0 0 2px #bc0d3c;
 }
 
 .banner .optin_btn:hover {
-    color: #03072b;
-    background-color: #04c471;
+    color: #111111;
+    background-color: #bc0d3c;
 }
 
 .banner form {
@@ -288,6 +287,10 @@ hr {
     border-radius: 0  5px 5px 0;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.blog-search {
+    margin-bottom: 10px;
 }
 
 /*SIDEBAR*/

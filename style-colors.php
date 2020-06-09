@@ -6,9 +6,33 @@
 }
 
 /*.menuarea nav li a {
-    text-decoration-color: <?php // echo get_theme_mod('gc_menu_decoration'); ?>;
+    text-decoration-color: <?php // echo get_theme_mod('gc_menu'); ?>;
     color: <?php // echo get_theme_mod('gc_menu'); ?>;
 }*/
+/* MENU */
+.navbar-light .navbar-nav .nav-link  {
+    color: <?php echo get_theme_mod('gc_menu'); ?>;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: <?php echo get_theme_mod('gc_menu_hover'); ?>;
+    border-bottom: 2px solid <?php echo get_theme_mod('gc_menu'); ?>;
+}
+
+.dropdown-item {
+    color: <?php echo get_theme_mod('gc_menu'); ?>;
+}
+
+.dropdown-item:hover::after {
+    content: '';
+    display: block;
+    width: 30px;
+    border-top: 2px solid <?php echo get_theme_mod('gc_menu_hover'); ?>;
+}
 
 .banner {
     <?php if(get_theme_mod('gc_emailtop_bg')): ?>

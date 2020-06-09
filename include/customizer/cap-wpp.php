@@ -1,5 +1,5 @@
 <?php
-function gc_pgwpp_customizer( $wp_customize ) {
+function gc_capwpp_customizer( $wp_customize ) {
 
     //SETTINGS
     //Texts

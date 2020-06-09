@@ -5,7 +5,7 @@ function gc_colors_customizer( $wp_customize ) {
     //Header
     $wp_customize->add_setting('gc_linetop', array('default' => '#bc0d3c'));
     $wp_customize->add_setting('gc_menu', array('default' => '#111111'));
-    $wp_customize->add_setting('gc_menu_decoration', array('default' => '#bc0d3c'));
+    $wp_customize->add_setting('gc_menu_hover', array('default' => '#bc0d3c'));
 
     $wp_customize->add_setting('gc_barcta', array('default' => '#bc0d3c'));
     $wp_customize->add_setting('gc_barcta_hover', array('default' => '#111111'));
@@ -141,11 +141,11 @@ function gc_colors_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize,
-            'gc_menu_decoration',
+            'gc_menu_hover',
             array(
                 'label' => 'Hover Menu',
                 'section' => 'gc_header',
-                'settings' => 'gc_menu_decoration',
+                'settings' => 'gc_menu_hover',
             )
         )
     );
